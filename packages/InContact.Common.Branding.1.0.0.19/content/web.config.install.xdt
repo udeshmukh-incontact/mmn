@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <appSettings xdt:Transform="InsertIfMissing">
+    <!--Partner Branding Service -->
+    <add key="PartnerBrandingApiUsername" value="TestUser" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+    <add key="PartnerBrandingApiPassword" value="Welcome@123" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+    <add key="PartnerBrandingApiBaseUrl" value="http://lab-corpapi.blfdev.lab/PartnerBrandingAPI/api/" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+  </appSettings>
+</configuration>

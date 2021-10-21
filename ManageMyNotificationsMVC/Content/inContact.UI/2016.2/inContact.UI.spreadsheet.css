@@ -1,0 +1,47 @@
+﻿.k-animation-container {
+    max-height: 200px;
+}
+
+    .k-animation-container .k-popup {
+        max-height: 200px !important;
+        overflow-y: auto !important;
+        overflow-x: inherit !important;
+    }
+
+.k-header.k-spreadsheet-tabstrip {
+    background-color: #eae8e8;
+    color: #313131;
+}
+
+.k-spreadsheet-toolbar > .k-button {
+    border-radius: 4px;
+    margin: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+
+.k-spreadsheet-toolbar > .k-button-icon {
+    padding-left: .4em;
+    padding-right: .4em;
+}
+
+.k-animation-container .k-popup .k-list li {
+    white-space: nowrap;
+}
+
+.k-spreadsheet > .k-spreadsheet-view,
+.k-spreadsheet .k-spreadsheet-formula-input,
+.k-spreadsheet .k-spreadsheet-action-bar .k-dropdown-wrap .k-input {
+    font-family: 'effra', 'Open Sans', sans-serif !important;
+    font-size: 14px;
+}
+
+.k-spreadsheet-cell-context-menu .k-item,
+.k-spreadsheet-row-header-context-menu .k-item, 
+.k-spreadsheet-col-header-context-menu .k-item {
+    color: black;
+    text-align: left;
+}
+
+.k-spreadsheet .k-dirty{ border: 4px solid ;border-color: red red red red;}

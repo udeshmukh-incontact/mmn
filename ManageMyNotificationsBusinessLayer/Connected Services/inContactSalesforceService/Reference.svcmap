@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc33f1ee-0c8b-4895-bc93-c35b11084fd0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="4349d2d8-0b0e-4efc-b07c-23e15fcf3f23" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="26d42c7a-eef4-4aca-ac49-b7276053f81a" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="9ce6776e-3700-4a4d-b327-6094d2f06931" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain1.xsd" MetadataType="Schema" ID="ab570a25-69f4-41b6-b65e-34cd09882047" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="Salesforce.Common.Models.Json1.xsd" MetadataType="Schema" ID="8f39f04d-58be-4552-8013-05f419612f7b" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="fda8ef41-b30d-405a-95a4-980cf368a169" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="Message1.xsd" MetadataType="Schema" ID="d2cd781d-00e4-411b-9fe7-3c2e7685e756" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.CSO1.xsd" MetadataType="Schema" ID="cc9c5e90-4503-4bd3-b09f-d3632cfbac92" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.AccountSearch1.xsd" MetadataType="Schema" ID="10d6c912-6193-4866-8c03-e2e55e1bdf8b" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.IS_Reports1.xsd" MetadataType="Schema" ID="0ac2b7eb-b33d-4d8f-ab6b-543d76fb5a1e" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.Enums1.xsd" MetadataType="Schema" ID="35145d3e-05da-4705-98ff-7c431594cae2" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.ContentLibrary1.xsd" MetadataType="Schema" ID="fa4ed882-a380-4df0-8ea3-ca1769cb9a68" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.SalesforceUserService1.xsd" MetadataType="Schema" ID="db1b88cb-ac5a-400a-b67b-f4deff53a136" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.SalesforceNotificationService1.xsd" MetadataType="Schema" ID="803c6d42-8a32-4eb4-9d09-6a777262e9d3" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+    <MetadataFile FileName="InContact.Sfdc.Domain.XMattersIntegrationService1.xsd" MetadataType="Schema" ID="2c0e45a1-e267-47e2-b5fe-1f6f66958ae3" SourceId="1" SourceUrl="net.tcp://lab-salesforceservice.blfdev.lab:7808/services/SalesforceService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

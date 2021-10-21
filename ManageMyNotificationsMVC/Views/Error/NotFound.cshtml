@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "File Not Found";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    body {
+        display: block;
+    }
+</style>
+<div class="custom-error">
+    <h2>The requested resource was not found.</h2>
+</div>
+@section sessiontimeout{
+    @Scripts.Render("~/bundles/sessiontimeout")
+}

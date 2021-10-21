@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" />
+  <xs:complexType name="QueryResultOfDataCategorySelectionR4Aesgjl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataCategorySelection" Namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Done" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextRecordsUrl" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="Records" nillable="true" type="q1:ArrayOfDataCategorySelection" />
+      <xs:element minOccurs="0" name="TotalSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryResultOfDataCategorySelectionR4Aesgjl" nillable="true" type="tns:QueryResultOfDataCategorySelectionR4Aesgjl" />
+  <xs:complexType name="QueryResultOfCaseArticleFeedR4Aesgjl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CaseArticleFeed" Namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Done" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextRecordsUrl" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="Records" nillable="true" type="q2:ArrayOfCaseArticleFeed" />
+      <xs:element minOccurs="0" name="TotalSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryResultOfCaseArticleFeedR4Aesgjl" nillable="true" type="tns:QueryResultOfCaseArticleFeedR4Aesgjl" />
+  <xs:complexType name="QueryResultOfAttachmentFeedR4Aesgjl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttachmentFeed" Namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Done" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextRecordsUrl" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="Records" nillable="true" type="q3:ArrayOfAttachmentFeed" />
+      <xs:element minOccurs="0" name="TotalSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryResultOfAttachmentFeedR4Aesgjl" nillable="true" type="tns:QueryResultOfAttachmentFeedR4Aesgjl" />
+  <xs:complexType name="QueryResultOfCaseCommentFeedR4Aesgjl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CaseCommentFeed" Namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Done" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextRecordsUrl" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="Records" nillable="true" type="q4:ArrayOfCaseCommentFeed" />
+      <xs:element minOccurs="0" name="TotalSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryResultOfCaseCommentFeedR4Aesgjl" nillable="true" type="tns:QueryResultOfCaseCommentFeedR4Aesgjl" />
+  <xs:complexType name="QueryResultOfEmailMessageFeedR4Aesgjl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="QueryResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Salesforce.Common.Models" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EmailMessageFeed" Namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Done" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextRecordsUrl" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="Records" nillable="true" type="q5:ArrayOfEmailMessageFeed" />
+      <xs:element minOccurs="0" name="TotalSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryResultOfEmailMessageFeedR4Aesgjl" nillable="true" type="tns:QueryResultOfEmailMessageFeedR4Aesgjl" />
+</xs:schema>

@@ -1,0 +1,115 @@
+﻿<div id="manageTimeFrameModal" class="modal fade" role="dialog" style="overflow-y: hidden;">
+    <form id="manageTimeFrameForm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header pb-header-color1">
+                    <button type="button" class="close pb-close-button pb-control-opacity" id="close-time-frame">&times;</button>
+                    <h4 class="modal-title">Manage Timeframes</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="error-message">
+                        
+                    </div>
+                    <div class="row">
+                        <div class='col-md-6 col-xs-6'>
+                            <div class="form-group">
+                                <label for="timeFrameName">Time Zone</label>
+                                <input type="text" disabled class="form-control" id="timeFrameTimeZone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-area pb-grid-color1" id="tab-area-timeframe">
+                        <div class="container">
+                            <div class="row">
+                                <ul id="time-frame-tab" class="nav nav-tabs">
+                                </ul>
+                                <div id="content-area-timeframe" class="tab-content tab-content-padding tabs">
+                                    <div id="tab-content-1" class="tab-pane fade in active">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="update-time-frame" type="button" class="incontact-blue-action-button pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" title="Click to Update"
+                            @{ if (User.VerifyImpersonationMode()) { @: disabled="disabled"
+                       } }>Update</button>
+                    <button id="cancel-time-frame" type="button" class="incontact-blue-action-button pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" title="Click to Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="hide">
+        <div class="timeframe-template">
+            <div class="row">
+                <div class='col-md-6 col-xs-6'>
+                    <div class="form-group">
+                        <label for="timeFrameName" class="required-label">Name</label>
+                        <input type="text" class="form-control timeFrameName pb-focus-color">
+                        <label class="error timeFrameNameError" style="display:none"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-md-6 col-xs-6'>
+                    <div class="form-group input-display">
+                        <label for="timeFrameStartTime" class="required-label">Start Time</label>
+                        <div class="input-group date">
+                            <input type="text" class="form-control timeFrameStartTime pb-focus-color" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                        <label class="error timeFrameStartTimeError" style="display:none"></label>
+                    </div>
+                </div>
+                <div class='col-md-6 col-xs-6'>
+                    <div class="form-group input-display">
+                        <label for="timeFrameEndTime" class="required-label">End Time</label>
+                        <div class="input-group date">
+                            <input type='text' class="form-control timeFrameEndTime pb-focus-color" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                        <label class="error timeFrameEndTimeError" style="display:none"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="form-group">
+                        <label class="required-label">Days</label>
+                        <div style="display:block;" class="btn-group timeFrameDays" data-toggle="buttons">
+                            <label class="btn">
+                                <input type="checkbox" value="SU" />Sun
+                            </label>
+                            <label class="btn">
+                                <input type="checkbox" value="MO" />Mon
+                            </label>
+                            <label class="btn">
+                                <input type="checkbox" value="TU" />Tue
+                            </label>
+                            <label class="btn">
+                                <input type="checkbox" value="WE" />Wed
+                            </label>
+                            <label class="btn">
+                                <input type="checkbox" value="TH" />Thu
+                            </label>
+                            <label class="btn">
+                                <input type="checkbox" value="FR" />Fri
+                            </label>
+                            <label class="btn">
+                                <input type="checkbox" value="SA" />Sat
+                            </label>
+                        </div>
+                        <div class="clear-both"></div>
+                        <label class="error timeFrameDaysError" style="display:none"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

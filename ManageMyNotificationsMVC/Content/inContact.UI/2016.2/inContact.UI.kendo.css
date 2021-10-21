@@ -1,0 +1,466 @@
+﻿.k-header {
+    background-color: #001D42;
+    background-image: none;
+    color: #fff;
+}
+
+
+/****** Grids ******/
+
+.k-grid, .k-grid td, .k-grid th {
+}
+
+.k-grid-header {
+    background-color: #001D42;
+    background-image: none;
+    color: #fff;
+}
+
+.k-grid-header th:hover {
+    background-color: #00598F;
+    cursor: pointer;
+}
+
+.k-grid-header .k-header>.k-link {
+    color: #fff;
+}
+
+.k-grid-header .k-icon {
+    background-image: url('/content/kendo/Default/sprite_white.png');
+}
+
+.k-grid-content tbody {
+    color: #4b4f54;
+}
+
+.k-grid-content tr:hover {
+    background-color: #cdcdcd;
+    background-image: none;
+}
+
+.k-grid-content .k-alt {
+    background-color: #f2f2f2;
+}
+
+.k-grid-content a {
+    color: #e68000;
+}
+
+.k-grid-content a:hover {
+    color: #e68000;
+    text-decoration:underline;
+}
+
+#tabstrip{
+     background-color:#fff;
+}
+
+/***********************   Calendar overides    ************************/
+
+.k-calendar .k-header {
+    background-color: #A20077;   /*Mulberry*/
+    background-image: none;
+}
+
+.k-calendar .k-today {
+    background-color: inherit;
+}
+
+.k-calendar .k-today .k-link {
+    color: #00598F;
+}
+    
+.k-calendar .k-today.k-state-hover {
+    background-color: #bcb4b0;
+    background-image:none;
+}  
+
+.k-calendar .k-link.k-nav-fast {
+    color: #fff;
+    background-color: inherit;
+}
+
+.k-calendar .k-footer .k-nav-today {
+    color: #A20077
+}
+
+
+.k-calendar td.k-state-hover{
+    background-color:gray;
+}
+
+
+.k-calendar td.k-state-selected.k-state-hover {
+    background-color: #A20077;
+    background-image: none;
+}
+
+.k-calendar .k-state-hover {
+    background-color: inherit;
+    background-image:none;
+}
+ 
+    .k-calendar .k-state-hover:hover .k-link {
+        color: #fff;
+    }
+
+.k-calendar th {
+    background-color: white;
+}
+
+.k-calendar .k-state-selected {
+    color: #fff;
+    background-color: #A20077;
+    border-color: #A20077;
+}
+
+    .k-calendar .k-state-selected .k-link {
+        color: #fff;
+    }
+
+.k-calendar.k-widget {
+    border-color: #00598F;
+}
+
+.k-calendar .k-other-month .k-link {
+    color: #dadada;
+}
+
+.k-calendar .k-link {
+    color: #00598F;
+}
+
+.k-calendar thead th {
+    color: #00598F;
+    border-color: #00598F;
+}
+
+.k-calendar .k-icon {
+    background-image: url('/content/kendo/Default/sprite_white.png');
+}
+
+.k-calendar .k-i-arrow-w {
+    background-position: 0 -304px;
+}
+
+.k-calendar .k-link:not(.k-state-disabled):hover>.k-i-arrow-w {
+    background-position: -16px -304px;
+}
+
+.k-calendar .k-i-arrow-e {
+    background-position: 0 -272px;
+}
+
+.k-calendar .k-link:not(.k-state-disabled):hover>.k-i-arrow-e {
+    background-position: -16px -272px;
+}
+
+/*********************** Paging ***********************/
+
+.k-pager-wrap {
+    background-color: #fff;
+    border-color: #00598F;
+    color: #00598F;
+}
+
+.k-pager-wrap .k-link:not(.k-state-disabled) {
+    border-color: #00598F;
+    color: #00598F;
+}
+
+.k-pager-wrap .k-link:not(.k-state-disabled) .k-icon {
+    background-image: url('/content/kendo/Default/sprite_blue.png');
+}
+
+.k-pager-wrap .k-link:hover:not(.k-state-disabled) {
+    color: #fff;
+    background-color: #A20077;
+    border-color: #A20077;
+}
+
+.k-pager-wrap .k-link:hover:not(.k-state-disabled) .k-icon {
+    background-image: url('/content/kendo/Default/sprite_white.png');
+}
+
+
+.k-pager-wrap .k-state-selected {
+    color: #fff;
+    background-color: #A20077;
+    border-color: #A20077;
+}
+
+/************************ Autocomplete *******************************/
+
+.k-autocomplete .k-input {
+    background-color: transparent;
+    background-image: url('/content/images/icon-search.png');
+    background-position: right 55%;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    width: 95% !important;
+}
+
+.k-autocomplete.k-state-default, .k-autocomplete.k-state-hover, .k-autocomplete.k-state-focused {
+    background-color: #fff;
+}
+
+/***********************  Textbox overides    ************************/
+
+input.k-textbox, textarea.k-textbox {
+    font-family: 'effra', 'Open Sans', sans-serif !important; 
+    background-color: #fff !important;
+    border-color: #4B4f54;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+input.k-textbox {
+    width: 200px;
+}
+
+textarea.k-textbox {
+    min-width: 200px;
+}
+
+.k-textbox:focus{
+    border-color: #E68000;
+}
+
+/*Style all input text fields that have .k-input class on focus except if said field has a data-role="datepicker".*/
+input[type=text].k-input:focus:not([data-role="datepicker"])
+{
+    outline: 2px auto #f48b31;
+}
+
+
+.k-textbox.short{
+    width:70px;
+}
+
+.k-textbox.short-companion{
+    width: 126px;
+}
+
+
+.k-dropdown.short{
+    width:90px;
+    min-width:inherit;
+}
+
+.k-dropdown.short-companion{
+    width: 106px;
+    min-width:inherit;
+}
+
+
+/***********************  Dropdown list/Combo box overides    ************************/
+
+.k-dropdown, .k-combobox {
+    background-color: #fff !important;
+    min-width: 200px;
+}
+    .k-dropdown-wrap, .k-dropdown.k-state-border-down .k-dropdown-wrap.k-state-border-down {
+        border-radius: 0;
+        border: solid #4B4f54 thin !important;
+    }
+.k-select, .k-ie .k-dropdown .k-dropdown-wrap .k-select, .k-ff .k-dropdown .k-dropdown-wrap .k-select, .k-dropdown-wrap.k-state-default {
+    background-color: #fff !important;
+  }
+
+.k-state-selected, .k-list>.k-state-selected{
+    color: #fff;
+    background-color: #00a1e1;
+    font-weight: bold;
+    border-color: #00a1e1;
+    border-radius: 0;
+}
+
+.k-state-default>.k-select {
+       border-color: #fff;
+}
+
+.k-item:hover, .k-list-optionlabel:hover {
+    background-color: #00a1e1;
+    border-color: #00a1e1;
+    color: #fff;
+    border-radius: 0;
+}
+
+[data-role="popup"] {
+    background-color: #fff !important;
+    border-radius: 0;
+    border-color: #00a1e1;
+    position: absolute;
+    text-align: left;
+}
+[data-role="popup"] ul li[class="k-item k-state-hover"], [data-role="popup"] ul li[class="k-item k-state-selected k-state-focused"] {
+    border-radius: 0;
+}
+
+/***********************  Kendo datepicker overides    ************************/
+
+.k-datepicker, .k-picker-wrap.k-state-default{
+    border-radius: 0;
+    border-color: #4B4f54;
+    box-shadow: none;
+}
+
+.k-datepicker{
+    min-width: 200px;
+}
+
+/***********************  Kendo upload button overides    ************************/
+.k-button.k-state-focused{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.k-button.k-upload-button{
+   height:26px;
+   padding: 0 30px;
+   margin-bottom: 20px;
+}
+
+.k-upload.k-header{
+   border: 0;
+   background-color: #fff;
+}
+
+.k-button.k-upload-selected {
+    background-color: #00a1e1;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    text-align: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 0px;
+    background-image:none;
+    float:right;
+    clear:right;
+}
+
+.k-button.k-upload-selected:hover {
+    background-color: #E68000;
+    color: white;
+    border-radius: 0px;
+}
+
+.k-upload-files {
+    margin: 0 0 .6em;
+    line-height: 2.66;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+}
+
+.k-filename {
+    position:relative;
+    display:inline-block;
+    min-width:10em;
+    max-width:16.667em;
+    vertical-align:middle;
+    margin-left:1em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+
+.k-file-success {
+    color:white;
+}
+
+.k-file-success .k-filename {
+    color: white;
+}
+
+.k-file-success .k-progress {
+    background-color: #A20077;
+}
+
+/***************************** Modals ******************************/
+
+.k-window {
+    text-align: left;
+    vertical-align: middle;
+}
+
+/*Tree views*/
+/* popup window */
+.k-window-titlebar.k-header {
+    color: #fff;
+    background-color: #00a1e1 !important;
+    border-radius: 0;
+}
+
+.k-window-actions {
+    color: #fff;
+}
+
+div.k-window{
+    border-radius: 0;
+}
+
+/* Kendo Tabs Styles overrides */
+
+.k-tabstrip-items > .k-item:hover, .k-list-optionlabel:hover {
+    background-color: #84C4D2;
+    border-color: #84C4D2;
+    color: #fff;
+    border-radius: 0;
+}
+
+.k-panelbar>li.k-state-default>.k-link, .k-tabstrip-items .k-state-default .k-link:hover {
+    color: white;
+}
+
+    
+/* Upload message overides */
+.k-file-error .k-progress {
+    background-color: #E68000;
+}
+
+.k-file-error .k-filename{
+    color: #FFFFFF;
+}
+
+.k-file-error .k-icon{
+    background-image: url('/content/kendo/Default/sprite_white.png');
+}
+
+.k-window-titlebar .k-icon {
+    background-image: url('/content/kendo/Default/sprite_white.png');
+}
+
+/* New Styles */
+
+.k-in:hover {
+    background-color: #84C4D2;
+    color:white;
+}
+
+.k-in.k-state-selected {
+     background-color: #E68000;
+}
+
+.k-widget.k-notification.k-notification-error {
+    background-color: #E68000;
+    color: white;
+    border-color: #E68000;
+}
+
+    .k-widget.k-notification.k-notification-error .k-icon {
+        background-image: url('/content/kendo/Default/sprite_white.png');
+    }
+
+/* rules for outlines in special input elements*/
+.k-dropdown-wrap.k-state-focused {
+    border: 2px solid #f48b31 !important;
+}
+
+span.k-dropdown-wrap.k-state-focused input.k-input[type="text"] {
+    outline: none;
+}
+
+    

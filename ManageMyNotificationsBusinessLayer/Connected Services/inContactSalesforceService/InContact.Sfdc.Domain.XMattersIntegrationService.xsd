@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="NotificationGroupStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Failed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NotificationGroupStatus" nillable="true" type="tns:NotificationGroupStatus" />
+  <xs:complexType name="XMUserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cluster" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmattersGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="accounts" nillable="true" type="tns:ArrayOfCadeBillAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XMUserDetails" nillable="true" type="tns:XMUserDetails" />
+  <xs:complexType name="ArrayOfCadeBillAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CadeBillAccount" nillable="true" type="tns:CadeBillAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCadeBillAccount" nillable="true" type="tns:ArrayOfCadeBillAccount" />
+  <xs:complexType name="CadeBillAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CadebillAccountNo__c" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CadeBillAccount" nillable="true" type="tns:CadeBillAccount" />
+</xs:schema>

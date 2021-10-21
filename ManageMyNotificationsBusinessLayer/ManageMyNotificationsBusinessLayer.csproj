@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F0D9A14-F7EE-47F9-A00D-FDC203F41DCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ManageMyNotificationsBusinessLayer</RootNamespace>
+    <AssemblyName>ManageMyNotificationsBusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <CodeAnalysisRuleSet>..\.sonarlint\managemynotificationscsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\.sonarlint\managemynotificationscsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\.sonarlint\managemynotificationscsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\.sonarlint\managemynotificationscsharp.ruleset">
+      <Link>managemynotificationscsharp.ruleset</Link>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\Arrays1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.AccountSearch1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.ContentLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.CSO1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.Enums1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.IS_Reports1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.SalesforceNotificationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.SalesforceUserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain.XMattersIntegrationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\InContact.Sfdc.Domain1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.AccountContactRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.AccountSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.AccountUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.ArticleSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Case.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.CaseDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.CaseSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Contact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.CustomerOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.CustomerOrderHistoryItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.CustomerOrderID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.General.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.HowTo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.KnowledgeArticleVersion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.LineItemComment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.MainBillingContactRoles.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.NotificationContact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.NotificationTimeZone.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Opportunity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.OrderLineGeneralItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.OrderLineSpecificItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.OrderSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.PartnerCase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.PartnerCaseIncidentUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Permissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.ProductGoLive1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.ProjectData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Quote1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.QuoteLine1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Q_A.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.RecentOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.SidebarLink.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Solution.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.SupportDocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.Technical.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.UserClaimResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.UserDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.UserUpsertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.XMAudit1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.XMAuditType1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\ManageMyNotificationsBusinessLayer.inContactSalesforceService.XMUserDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\Message1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\Salesforce.Common.Models.Json1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\service1.wsdl" />
+    <None Include="Connected Services\inContactSalesforceService\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\inContactSalesforceService\service21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\XMattersConfig.cs" />
+    <Compile Include="Config\XMattersError.cs" />
+    <Compile Include="Connected Services\inContactSalesforceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Converters\DeviceConverter.cs" />
+    <Compile Include="Data\AuditLogInfo.cs" />
+    <Compile Include="Data\Device\DeviceRequest.cs" />
+    <Compile Include="Data\Device\DeviceResponse.cs" />
+    <Compile Include="Data\Error.cs" />
+    <Compile Include="Data\Errorresponse.cs" />
+    <Compile Include="Data\Group\GroupMembers.cs" />
+    <Compile Include="Data\Group\Groups.cs" />
+    <Compile Include="Data\Group\NotificationGroupSave.cs" />
+    <Compile Include="Data\NotificationGroup\NotificationGroup.cs" />
+    <Compile Include="Data\NotificationGroup\NotificationGroupResponse.cs" />
+    <Compile Include="Data\SFContact.cs" />
+    <Compile Include="Data\Person\GetPersonResponse.cs" />
+    <Compile Include="Data\Group\Group.cs" />
+    <Compile Include="Data\Group\GroupMember.cs" />
+    <Compile Include="Data\Links.cs" />
+    <Compile Include="Data\Member.cs" />
+    <Compile Include="Data\Owner.cs" />
+    <Compile Include="Data\Person\Person.cs" />
+    <Compile Include="Data\Person\PersonDevices.cs" />
+    <Compile Include="Data\Person\PersonRoles.cs" />
+    <Compile Include="Data\Provider.cs" />
+    <Compile Include="Data\Role.cs" />
+    <Compile Include="Data\Group\GroupShift.cs" />
+    <Compile Include="Data\Group\GroupShifts.cs" />
+    <Compile Include="Data\Salesforce\UserNotificationDetail.cs" />
+    <Compile Include="Data\Shift\ShiftResponse.cs" />
+    <Compile Include="Data\Site.cs" />
+    <Compile Include="Data\Timeframe.cs" />
+    <Compile Include="ErrorMessageFormatter.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Exceptions\ServiceException.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Interfaces\ICustomerNotificationsAPIService.cs" />
+    <Compile Include="Interfaces\IAuditLogService.cs" />
+    <Compile Include="Interfaces\ICustomerNotificationsAPIHelper.cs" />
+    <Compile Include="Interfaces\IPersonBusinessLogic.cs" />
+    <Compile Include="Interfaces\XMatters\IXMatterGroupService.cs" />
+    <Compile Include="Proxy\SalesforceNotificationServiceProxy.cs" />
+    <Compile Include="Proxy\XMattersIntegrationServiceProxy.cs" />
+    <Compile Include="Services\AuditLogService.cs" />
+    <Compile Include="Services\CustomerNotificationsAPIHelper.cs" />
+    <Compile Include="Services\CustomerNotificationsAPIService.cs" />
+    <Compile Include="Services\XMatters\XMatterGroupService.cs" />
+    <Compile Include="Services\XMatters\XMatterPersonService.cs" />
+    <Compile Include="Services\XMatters\XMattersServiceHelper.cs" />
+    <Compile Include="PersonBusinessLogic.cs" />
+    <Compile Include="Interfaces\XMatters\IXMatterPersonService.cs" />
+    <Compile Include="Interfaces\XMatters\IXMattersServiceHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="InContact.Common.Utilities, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InContact.Common.Utilities.2.4\lib\net45\InContact.Common.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\inContactSalesforceService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\inContactSalesforceService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\inContactSalesforceService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\inContactSalesforceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\.sonarlint\managemynotifications\CSharp\SonarLint.xml">
+      <Link>SonarLint.xml</Link>
+    </AdditionalFiles>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

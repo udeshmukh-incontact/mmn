@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ContactPermissions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExcludedFromAutoPermissionSetAssignment" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactPermissions" nillable="true" type="tns:ContactPermissions" />
+  <xs:complexType name="UserUpsertResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactUpdated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PermissionSetsUpdated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserUpdated" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserUpsertResponse" nillable="true" type="tns:UserUpsertResponse" />
+  <xs:complexType name="ArrayOfPermissions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Permissions" nillable="true" type="tns:Permissions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPermissions" nillable="true" type="tns:ArrayOfPermissions" />
+  <xs:complexType name="Permissions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Permissions" nillable="true" type="tns:Permissions" />
+  <xs:complexType name="ArrayOfUserClaimType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserClaimType" type="tns:UserClaimType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserClaimType" nillable="true" type="tns:ArrayOfUserClaimType" />
+  <xs:simpleType name="UserClaimType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProfileName" />
+      <xs:enumeration value="ProfileId" />
+      <xs:enumeration value="AccountName" />
+      <xs:enumeration value="AccountId" />
+      <xs:enumeration value="ExcludedFromAutoPermissionSetAssignment" />
+      <xs:enumeration value="VisibilityToAllLeads" />
+      <xs:enumeration value="UserLicenseName" />
+      <xs:enumeration value="ContactId" />
+      <xs:enumeration value="ContactFirstName" />
+      <xs:enumeration value="ContactLastName" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserClaimType" nillable="true" type="tns:UserClaimType" />
+  <xs:complexType name="UserClaimResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PermissionSetIds" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UserClaims" nillable="true" type="q2:ArrayOfKeyValueOfUserClaimTypestringFveag6B2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserClaimResponse" nillable="true" type="tns:UserClaimResponse" />
+  <xs:complexType name="ArrayOfAccountUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountUser" nillable="true" type="tns:AccountUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccountUser" nillable="true" type="tns:ArrayOfAccountUser" />
+  <xs:complexType name="AccountUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADFSGuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountUser" nillable="true" type="tns:AccountUser" />
+  <xs:complexType name="PartnerRegistration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditinalInformation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonthlyLoginFrequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartnerType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PartnerRegistration" nillable="true" type="tns:PartnerRegistration" />
+  <xs:complexType name="ArrayOfUserDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDetail" nillable="true" type="tns:UserDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDetail" nillable="true" type="tns:ArrayOfUserDetail" />
+  <xs:complexType name="UserDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleInitial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesforceId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDetail" nillable="true" type="tns:UserDetail" />
+</xs:schema>

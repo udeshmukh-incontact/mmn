@@ -1,0 +1,188 @@
+﻿@{
+    ViewBag.Title = "ManageNotification";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using InContact.Common.Branding;
+
+<input id="configBU" type="hidden" value="@ViewBag.configBU" />
+@if (User.VerifyImpersonationMode())
+{
+    <input id="impersonationStatus" type="hidden" value=true />
+}
+
+
+<div class="page-header page-header-container equal-spacing">
+    <h2 class="float-left h2-style pb-button-textcolor1"> Notification Management</h2>
+    <div class="clear-both"> </div> <div class="clear-both"> </div>
+</div>
+<div class="success-message">
+    Saved successfully
+</div>
+<div class="notification-container">
+    <div id="loading-panel" class="loader" style='width:100%; height:100%; top: 0; left: 0; display:none;'>
+        <img src="~/Content/images/Spinner-1s-200px.gif" class="loading-image " alt="Loading..." />
+    </div>
+    <form class="form-horizontal" id="manageNotificationProfileForm">
+        <div id="profile-status-Error-div" class="form-inline device-row equal-spacing notification-profile-Error-div" style="padding-top: 15px; padding-bottom: 15px;">
+            <span id="notificationProfileInfo">**First and last name are required to create your notification profile. Please update accordingly</span>
+            <br> <span id="notificationProfileinputError" style="color: red;display:none;">**First Name and last name cannot be empty</span>
+        </div>
+        <div id="profile-input-div" class="notification-profile-div col-md-9 padding-left-80 padding-top-30 pb-bordor-color">
+            <div class="form-group ">
+                <label for="profileFirstName" class="col-sm-2 col-md-3 control-label required required-label">First Name</label>
+                <div class="col-sm-10 col-md-6 width-51-6">
+                    <input type="text" id="profileFirstName" name="profileFirstName" placeholder="First Name" class="form-control" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="profileLastName" class="col-sm-2 col-md-3 control-label required required-label">Last Name</label>
+                <div class="col-sm-10 col-md-6 width-51-6">
+                    <input type="text" id="profileLastName" name="profileLastName" placeholder="Last Name" required="required" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-md-9 padding-right-0">
+                    <input id="submitProfileData" v-on:click="updateNotificationProfileData" title="Click to Save changes" type="button" value="Save and Continue" class="incontact-blue-action-button pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor margin-right-6-2 float-right">
+                </div>
+            </div>
+        </div>
+    </form>
+    <form id="manageDevicesForm" style="visibility:hidden;">
+        <div id="errorSummaryContainer" class="device-row text-error equal-spacing" style="display:none;">
+            You must take the following actions and click "Save Changes" before we can enable your notification profile:
+            <ul>
+                <li id="errorSummaryTimeZone" style="display:none;">
+                    Select a Time Zone
+                </li>
+                <li id="errorSummaryDevice" style="display:none;">
+                    To receive notifications, at least one device must be added.
+                </li>
+                <li id="errorSummaryNotification" style="display:none;">
+                    No notification groups are currently selected. You must select at least one notification group to receive notifications.
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-inline device-row margin-bottom-15 equal-spacing row" id="time-zone-div">
+            <div class="col-md-5 col-xs-5 notification-status-div">
+                <label for="nStatus">Notification Profile Status:</label><span id="notification-profile-status" class="notification-status-text"></span>
+                <input id="enable-disable-notification" type="button" class="incontact-blue-action-button pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" value=""
+                       @{ if (User.VerifyImpersonationMode()) { @: disabled="disabled"
+                       } } />
+            </div>
+            <div class="col-md-7 col-xs-7" id="timeZoneDiv">
+                <label for="exampleInputName2">Notification Time Zone&nbsp;&nbsp;</label>
+                <select id="time-zone" class="form-control time-zone-input pb-focus-color" title="Select Notification Time Zone"></select>
+            </div>
+        </div>
+
+        <div class="tab-area equal-spacing pb-grid-color1" id="tab-area">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" title="Click to manage Devices" href="#devices" id="devicesTab" class="pb-grid-textcolor1 pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor pb-unclickabletab-textcolor">Devices</a></li>
+                        <li><a data-toggle="tab" title="Click to Manage Notification Groups" href="#notificationGroups" id="notificationTab" class="pb-grid-textcolor1 pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor pb-unclickabletab-textcolor">Notification Groups</a></li>
+                    </ul>
+
+                    <div class="tab-content tab-content-padding tabs">
+                        <div id="devices" class="tab-pane fade in active">
+                            <div class="add-device-row device-row-item equal-spacing">
+                                <button type="button" id="add-device" class="incontact-white-action-button pb-clickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor pb-border pb-unclickable-textcolor"><span class="glyphicon glyphicon-plus"></span> Add Device</button>
+                            </div>
+                            <hr />
+                            <div id="device-group">
+
+                            </div>
+                        </div>
+                        <div id="notificationGroups" class="tab-pane fade">
+                            <table class="table table-bordered table-responsive notification-group">
+                                <thead id="notificationGroupsTableHead">
+                                    <tr id="headerRow">
+                                        <td>
+                                            <span id="account-bu-col" class="sort-col">Account BU# <i class="fa fa-sort"></i></span>
+                                            <select id="account-buselect" title="Select Account BU#" class="form-control form-control-sm notification-select pb-focus-color"></select>
+                                        </td>
+                                        <td>
+                                            <span id="product-cluster-col" class="sort-col">Product/Cluster <i class="fa fa-sort"></i></span>
+                                            <select id="product-clusterselect" title="Select Product/Cluster" class="form-control form-control-sm notification-select pb-focus-color"></select>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody id="notificationGroupsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="device-button-group form-group pull-right" id="action-ctrl-area">
+            <div id="check-all-help-notification" style="display:none">
+                <a href="#" data-toggle="tooltip" data-trigger="hover" title="Select all when you want all notifications checked or unchecked. If you see a '-' you have partially selected notifications. You can simply click on the check box to Select All or De-Select all notifications." data-placement="left">
+                    <span class="glyphicon glyphicon-question-sign help-Icon pb-text-color"></span>
+                </a>
+            </div>
+
+            <div id="check-all-text-notification" style="display:none">
+                <input id="check-all-notification" type="checkbox" value="Check All" />  Check All
+            </div>
+
+            <input id="submit-notification" title="Click to Save changes" type="button" class="incontact-blue-action-button pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" value="Save Changes"/>
+            <input id="cancel-notification" title="Click to Cancel changes" type="button" class="incontact-blue-action-button pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" value="Cancel" />
+        </div>
+    </form>
+    @Html.Partial("_timeframe")
+
+    @Html.Partial("_DisableNotificationProfile")
+
+    <div class="hide">
+        <div class="device-template">
+            <div class="device-row row col-md-12 device-row-item equal-spacing">
+                <div class="col-md-3 col-xs-3 device-types-control">
+                    <i class="device-type-icon glyphicon glyphicon-envelope glyphicon-style">&nbsp;</i>
+                    <div class="device-types-div">
+                        <select class="form-control device-types pb-focus-color"></select>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                    <div class="form-group form-group-phone">
+                        <div class="dropdown device-type-smsphone pb-clickable-textcolor pb-unclickable-textcolor pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor">
+                            <button class="btn btn-primary dropdown-toggle country-code-dropdown pb-clickable-textcolor pb-unclickable-textcolor pb-focus-color pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" type="button" style="width:100%;" title="Select Country Code" data-toggle="dropdown">
+                                <span id="defaultCountryCode" value="US" class="value">+1</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul id="country-code" class="dropdown-menu"></ul>
+                        </div>
+                        <input type="text" class="form-control device-description pb-focus-color" maxlength="100">
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-5">
+                    <div class="device-type-phone" title="Click to Manage Time Frames">
+                        @*<span class="time-frame-span">
+                                Time Frame <span class="time-frame-name"></span>
+                            </span>*@
+                        <input class="incontact-white-action-button manage-time-frame pb-clickable-textcolor pb-unclickable-textcolor pb-border pb-clickable-fillcolor pb-unclickable-fillcolor pb-clickable-mouseover-textColor pb-clickable-mouseover-fillColor" type="button" value="Manage Timeframes" />
+                    </div>
+                    <div class="remove-device-div">
+                        <i class="glyphicon glyphicon-remove remove-device remove-device-width" title="Click to remove Device"></i>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div id="optionTest" style="visibility:hidden">
+
+    </div>
+</div>
+
+<script>
+    $(window).on('resize', function () {
+        $('input:focus').tooltip('show');
+        $(":input:focus").blur();
+    });
+</script>
+@section scripts{
+    @Scripts.Render("~/bundles/managenotification")
+}

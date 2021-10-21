@@ -1,0 +1,147 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Lato:400,700,400italic" rel="stylesheet" type="text/css" />
+    @*<link href="@(System.Configuration.ConfigurationManager.AppSettings["CorporateStylesLocation"] + "/Content/kendo/css")" rel="stylesheet" type="text/css" />*@
+
+    @RenderSection("kendoCss", false)
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/inContactUI/css")
+    @Styles.Render("~/Content/inContact.UI/2016.2/fontawesome")
+    @Styles.Render("~/Content/inContact.UI/2016.2/inContact.UI.boostrap.css")
+    @Styles.Render("~/Content/sitecss")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/scripts/inContactUI/common")
+    @*@Scripts.Render("~/bundles/kendoui")*@
+    @RenderSection("scripts", required: false)
+    @RenderSection("sessiontimeout", false)
+    @using InContact.Common.Branding
+
+    <style type="text/css">
+        .page-header {
+            /*margin: 0.5em 0 0.5em;*/
+            border-bottom-style: none;
+        }
+
+        header .search-container a, header .search-container a:hover, #header .search-container a:visited {
+            color: white;
+            text-decoration: none;
+            padding-top: 5px;
+        }
+        
+        /*body {
+            display: none;
+        }*/
+    </style>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (!string.IsNullOrEmpty(User.GetAdfsGuid()))
+        {
+            try
+            {
+                BrandingController bc = new BrandingController();
+                var link = bc.GetCssByAdfsGuid(User.GetAdfsGuid());
+                link = link + "?v=" + DateTime.Now.ToString("yyyyMMddhhmmss");
+            <link href=@link rel="stylesheet" type="text/css" />
+            }
+            catch (Exception ex) { }
+        }
+    }
+
+    <!--[if IE]>
+    <style>
+        .header-position {
+             position:-ms-page;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body style="height:auto;">
+
+
+    <header id="header" class="header-position">
+        @if (User.VerifyImpersonationMode())
+        {
+        <div class="impersonation-container">@User.GetImpersonationMessage()</div>
+        }
+        <div class="search-container pb-header-color1">
+            <div class="container centered-fixed-width-content">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+        <div class="menu-container" style="padding-bottom:51px;">
+            <div class="container centered-fixed-width-content" style="padding-top:4px;">
+                <img src="@Url.Content("/Content/NICE-CXone-Logo_Header.jpg")" class="logo float-left logo-link nice-logo-image pb-logo-url pb-logo-url-padding pb-logo-url-topmargin" alt="NICE inContact Logo" />
+            </div>
+        </div>
+    </header>
+
+    <div @if (User.VerifyImpersonationMode()) { @: class='container impersonation-container-padding'
+         } else { @: class='container container-padding'
+         }>
+        <div id="body">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <footer id="footer" class="web-site-footer pb-footer-color1 pb-header-textcolor1">
+        <div class="container" style="padding-left:0px;padding-right:0px;">
+            <div class="centered-fixed-width-content">
+                <div style="color: white;" class="float-left">
+                    <div class="float-left footer-line">                        
+                        <a href="https://www.niceincontact.com/call-center-software-company/legal" target="_blank" class="pb-header-textcolor1">Legal</a>
+                        |
+                        <a href="https://www.niceincontact.com/call-center-software-company/legal/privacy-policy" target="_blank" class="pb-header-textcolor1">Privacy</a>
+                        |
+                        <a href="https://www.niceincontact.com/contact-us" target="_blank" class="pb-header-textcolor1">Contact Us</a>
+                    </div>
+                    <div class="clear-both footer-line float-left pb-header-textcolor1" style="padding-top:15px;" >
+                        &copy; @DateTime.Now.Year NICE Inc. All Rights Reserved
+                    </div>
+
+                </div>
+
+                <div class="float-right">
+                    <div class="animated fadeInRight incontact-socialicon">
+                        <ul>
+                            <li>
+                                <a target="_blank" href="http://www.facebook.com/NICECXone">
+                                    <i class="fa fa-facebook-square pb-header-textcolor1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.twitter.com/NICECXone">
+                                    <i class="fa fa-twitter pb-header-textcolor1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.linkedin.com/company/NICECXone">
+                                    <i class="fa fa-linkedin-square pb-header-textcolor1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC9z5CCBCPNNGvm00m4PSMog" class="tooltips" target="_blank">
+                                    <i class="fa fa-youtube-square pb-header-textcolor1"></i>
+                                </a>
+                            </li>
+                            <li><a href="http://www.niceincontact.com/blog" class="pb-header-textcolor1" target="_blank">BLOG</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear-both"></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

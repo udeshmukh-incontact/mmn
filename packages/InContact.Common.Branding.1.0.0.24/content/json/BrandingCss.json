@@ -1,0 +1,82 @@
+﻿[
+  {
+    "key": "MMN_Button_Text_Color_1__c",
+    "value": "",
+    "property": "color",
+    "className": "bndg-Button-TextColor1"
+  },
+  {
+    "key": "MMN_Button_Text_Color_2__c",
+    "value": "",
+    "property": "color",
+    "className": "bndg-Button-TextColor2"
+  },
+  {
+    "key": "MMN_Footer_Color_1__c",
+    "value": "",
+    "property": "background-color",
+    "className": "bndg-Footer-Color1"
+  },
+  {
+    "key": "MMN_Header_Color_1__c",
+    "value": "",
+    "property": "background-color",
+    "className": "bndg-Header-Color1"
+  },
+  {
+    "key": "MMN_Header_Text_Color_1__c",
+    "value": "",
+    "property": "color",
+    "className": "bndg-Header-TextColor1"
+  },
+  {
+    "key": "MMN_Grid_Color_1__c",
+    "value": "",
+    "property": "background-color",
+    "className": "bndg-Grid-Color1"
+  },
+  {
+    "key": "MMN_Grid_Text_Color_1__c",
+    "value": "",
+    "property": "color",
+    "className": "bndg-Grid-TextColor1"
+  },
+
+  {
+    "key": "clicable_txt_Color",
+    "value": "#FFFFFF",
+    "property": "color",
+    "className": "bndg-Clicable-TextColor"
+  },
+  {
+    "key": "clicable_fill_Color",
+    "value": "#001D42",
+    "property": "background-color",
+    "className": "bndg-Clicable-FillColor"
+  },
+  {
+    "key": "unClicable_txt_Color",
+    "value": "#000000",
+    "property": "color",
+    "className": "bndg-UnClicable-TextColor"
+  },
+  {
+    "key": "unClicable_fill_Color",
+    "value": "#EEEEEE",
+    "property": "background-color",
+    "className": "bndg-UnClicable-FillColor"
+  },
+  {
+    "key": "clicable_Mouseover_Txt_Color",
+    "value": "#FFFFFF",
+    "property": "color",
+    "className": "bndg-Clicable-Mouseover-TextColor"
+  },
+  {
+    "key": "clicable_Mouseover_fill_Color",
+    "value": "#00598F",
+    "property": "background-color",
+    "className": "bndg-Clicable-Mouseover-FillColor"
+  }
+
+]

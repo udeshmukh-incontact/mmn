@@ -1,0 +1,164 @@
+﻿[
+  {
+    "accountBU": {
+      "key": "Verizon 1234567",
+      "value": "Verizon 1234567"
+    },
+    "productCluster": {
+      "key": "InContact C6",
+      "value": "InContact C6"
+    },
+    "notifications": [
+      {
+        "deviceType": "primaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "secondaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "smsPhone",
+        "event": false,
+        "maintainance": false
+      }
+    ]
+  },
+  {
+    "accountBU": {
+      "key": "Verizon 1234567",
+      "value": "Verizon 1234567"
+    },
+    "productCluster": {
+      "key": "Dialer C6",
+      "value": "Dialer C6"
+    },
+    "notifications": [
+      {
+        "deviceType": "primaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "secondaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "smsPhone",
+        "event": false,
+        "maintainance": false
+      }
+    ]
+  },
+  {
+    "accountBU": {
+      "key": "Ring Central 9876543",
+      "value": "Ring Central 9876543"
+    },
+    "productCluster": {
+      "key": "ACD",
+      "value": "ACD"
+    },
+    "notifications": [
+      {
+        "deviceType": "primaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "secondaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "smsPhone",
+        "event": false,
+        "maintainance": false
+      }
+    ]
+  },
+  {
+    "accountBU": {
+      "key": "Verizon 1234567",
+      "value": "Verizon 1234567"
+    },
+    "productCluster": {
+      "key": "Cluster 1",
+      "value": "Cluster 1"
+    },
+    "notifications": [
+      {
+        "deviceType": "primaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "secondaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "smsPhone",
+        "event": false,
+        "maintainance": false
+      }
+    ]
+  },
+  {
+    "accountBU": {
+      "key": "ABC",
+      "value": "ABC"
+    },
+    "productCluster": {
+      "key": "Cluster 1",
+      "value": "Cluster 1"
+    },
+    "notifications": [
+      {
+        "deviceType": "primaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "secondaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "smsPhone",
+        "event": false,
+        "maintainance": false
+      }
+    ]
+  },
+  {
+    "accountBU": {
+      "key": "XYZ",
+      "value": "XYZ"
+    },
+    "productCluster": {
+      "key": "Cluster 2",
+      "value": "Cluster 2"
+    },
+    "notifications": [
+      {
+        "deviceType": "primaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "secondaryEmail",
+        "event": false,
+        "maintainance": false
+      },
+      {
+        "deviceType": "smsPhone",
+        "event": false,
+        "maintainance": false
+      }
+    ]
+  }
+]

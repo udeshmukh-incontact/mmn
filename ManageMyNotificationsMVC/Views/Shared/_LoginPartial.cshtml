@@ -1,0 +1,30 @@
+﻿@*@using Microsoft.AspNet.Identity*@
+@if (User.Identity.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right user-title-margin" }))
+    {
+        
+        @*@Html.AntiForgeryToken()*@
+        <div class="login-information login-account">
+            <a class="pop-over-menu-trigger pb-header-textcolor1" style="color:white;">
+
+                <div class="logged-in-username" style="color:white;">
+                    Hello  @User.GetUserName()
+
+                    &nbsp;
+                    @Html.ActionLink("Log off", "Logout", "Notifications", new { @class = "pb-header-textcolor1" }, null)
+
+                </div>
+
+            </a>
+        </div>
+
+    }
+}
+else
+{
+    <ul class="nav navbar-nav">
+        @*send user to home page as this page requires authentication and will re-direct user to login page*@
+        <li>@Html.ActionLink("Log in", "Index", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

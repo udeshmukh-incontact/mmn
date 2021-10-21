@@ -1,0 +1,84 @@
+﻿.navbar-brand{
+    width:650px;
+    height:100%; /* height of the background image? */
+    text-align:center;
+    background-image:url(images/incontact_logo_sm.png);
+    background-repeat: no-repeat;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #555;
+}
+
+.navbar a {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #555;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #18ba9b;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.navbar {
+    background-color: white;
+    text-transform: uppercase;
+    font-family: 'effra', 'Open Sans', sans-serif !important;
+    color:#555;
+}
+
+/*Buttons*/
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #00a6ff;
+    border-color: #00a6ff;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #cd6632 ;
+    border-color: #00a6ff;
+    font-size: 19px;
+    font-weight: 400;
+    white-space: nowrap;
+    border-radius: 25px !important;
+    -moz-border-radius: 25px !important;
+    -webkit-border-radius: 25px !important;
+}
+
+.btn {
+   display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}

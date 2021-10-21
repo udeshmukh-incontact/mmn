@@ -1,0 +1,2572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/Message" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.CSO" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.AccountSearch" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.IS_Reports" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.ContentLibrary" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.Enums" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" />
+  <xs:element name="InsertCustomerOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="orderToInsert" nillable="true" type="q1:CustomerOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCustomerOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertCustomerOrderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQ_AArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQ_AArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetQ_AArticleResult" nillable="true" type="q2:Q_A" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutionArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutionArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetSolutionArticleResult" nillable="true" type="q3:Solution" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHowToArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHowToArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetHowToArticleResult" nillable="true" type="q4:HowTo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleNumberByTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleNumberByTitleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetArticleNumberByTitleResult" nillable="true" type="q5:KnowledgeArticleVersion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleSummariesByArticleNumbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="articleNumbers" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleSummariesByArticleNumbersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetArticleSummariesByArticleNumbersResult" nillable="true" type="q7:ArrayOfKnowledgeArticleVersion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleImageByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="feoid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleImageByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetArticleImageByIdsResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCaseArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCaseArticleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetPartnerCaseResult" nillable="true" type="q8:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenPartnerCases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenPartnerCasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOpenPartnerCasesResult" nillable="true" type="q9:ArrayOfPartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCaseData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="caseIds" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCaseDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetPartnerCaseDataResult" nillable="true" type="q11:ArrayOfPartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseFeeds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseFeedsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCaseFeedsResult" nillable="true" type="q12:CaseDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchCases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="args" nillable="true" type="q13:CaseSearchArgs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchCasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="SearchCasesResult" nillable="true" type="q14:ArrayOfCaseSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="caseNos" nillable="true" type="q15:ArrayOfstring" />
+        <xs:element minOccurs="0" name="rqType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCaseListResult" nillable="true" type="q16:ArrayOfCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseListByRecordTypeAndReason">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="caseNos" nillable="true" type="q17:ArrayOfstring" />
+        <xs:element minOccurs="0" name="rqType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseListByRecordTypeAndReasonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCaseListByRecordTypeAndReasonResult" nillable="true" type="q18:ArrayOfCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="args" nillable="true" type="q19:OrderSearchArgs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="SearchOrdersResult" nillable="true" type="q20:ArrayOfOrderSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseGetAccountAndContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="partnerCase" nillable="true" type="q21:PartnerCase" />
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseGetAccountAndContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="CreatePartnerCaseGetAccountAndContactResult" nillable="true" type="q22:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseGetAccountAndParentContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="partnerCase" nillable="true" type="q23:PartnerCase" />
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentAccountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseGetAccountAndParentContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="CreatePartnerCaseGetAccountAndParentContactResult" nillable="true" type="q24:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseGetAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="partnerCase" nillable="true" type="q25:PartnerCase" />
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseGetAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="CreatePartnerCaseGetAccountResult" nillable="true" type="q26:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="partnerCase" nillable="true" type="q27:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="CreatePartnerCaseResult" nillable="true" type="q28:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePartnerCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="partnerCase" nillable="true" type="q29:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePartnerCaseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCaseStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCaseStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCaseStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCaseCadebillCredit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="cases" nillable="true" type="q30:ArrayOfCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCaseCadebillCreditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCaseCadebillCreditResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCaseCadebillTaxCredit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="taxCreditCases" nillable="true" type="q31:ArrayOfCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCaseCadebillTaxCreditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UpdateCaseCadebillTaxCreditResult" nillable="true" type="q32:ArrayOfKeyValueOfstringboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAccountCreditClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="accounts" nillable="true" type="q33:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAccountCreditClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAccountCreditClassResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenPartnerCasesWithRequestType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenPartnerCasesWithRequestTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOpenPartnerCasesWithRequestTypeResult" nillable="true" type="q34:ArrayOfPartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechnicalArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechnicalArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetTechnicalArticleResult" nillable="true" type="q35:Technical" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetGeneralArticleResult" nillable="true" type="q36:General" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticlesFromCaseInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticlesFromCaseInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetArticlesFromCaseInformationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="accountNos" nillable="true" type="q37:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetPartnerAccountResult" nillable="true" type="q38:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="accountNos" nillable="true" type="q39:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetPartnerAccountsResult" nillable="true" type="q40:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListServices">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListServicesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetArticleImageResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostIdea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="idea" nillable="true" type="q41:Idea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostIdeaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PostIdeaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchArticles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchString" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dataCategories" nillable="true" type="q42:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchArticlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="SearchArticlesResult" nillable="true" type="q43:ArrayOfArticleSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetSolutionsResult" nillable="true" type="q44:General" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="attachment" nillable="true" type="q45:Attachment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAttachmentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCaseById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCaseByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetPartnerCaseByIdResult" nillable="true" type="q46:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseAsRecordTypeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="partnerCase" nillable="true" type="q47:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCaseAsRecordTypeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="CreatePartnerCaseAsRecordTypeIdResult" nillable="true" type="q48:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordTypeIdByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordTypeIdByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRecordTypeIdByNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="contact" nillable="true" type="q49:Contact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateContactResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseIDByCaseNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseIDByCaseNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCaseIDByCaseNumberResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetContactResult" nillable="true" type="q50:Contact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactByEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactByEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetContactByEmailResult" nillable="true" type="q51:Contact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountIDByAccountNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountIDByAccountNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAccountIDByAccountNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseDetailsByTroubleTktNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="troubleTktNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseDetailsByTroubleTktNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCaseDetailsByTroubleTktNumberResult" nillable="true" type="q52:PartnerCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactEmailByRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="role" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactEmailByRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetContactEmailByRoleResult" nillable="true" type="q53:ArrayOfContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountContactsForRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contactEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountContactsForRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAccountContactsForRoleResult" nillable="true" type="q54:ArrayOfContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactsByAdfsGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="contact" nillable="true" type="q55:Contact" />
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="contactRoles" nillable="true" type="q56:ArrayOfAccountContactRoles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactsByAdfsGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateContactsByAdfsGuidResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountByAccountNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountByAccountNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAccountByAccountNoResult" nillable="true" type="q57:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountListByAccountNos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="accountNos" nillable="true" type="q58:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountListByAccountNosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAccountListByAccountNosResult" nillable="true" type="q59:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAccountDetailsResult" nillable="true" type="q60:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInContactCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInContactClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetInContactClusterResult" nillable="true" type="q61:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendFeedback">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="feedback" nillable="true" type="q62:ServiceSiteArticleFeedback" />
+        <xs:element xmlns:q63="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="EmployeeGuid" type="q63:guid" />
+        <xs:element minOccurs="0" name="parentAcctNumber" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="accountNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendFeedbackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendFeedbackResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentByFileNameAndWorkspace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentFileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workspaceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentByFileNameAndWorkspaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.microsoft.com/Message" name="GetDocumentByFileNameAndWorkspaceResult" type="q64:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentBySupportSiteKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentBySupportSiteKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.microsoft.com/Message" name="GetDocumentBySupportSiteKeyResult" type="q65:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCustomerAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartnerCustomerAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetPartnerCustomerAccountsResult" nillable="true" type="q66:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSidebarLinks">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSidebarLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetSidebarLinksResult" nillable="true" type="q67:ArrayOfSidebarLink" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCaseComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="comment" nillable="true" type="q68:CaseComment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCaseCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateCaseCommentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPVoiceSeatsInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPVoiceSeatsInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.CSO" minOccurs="0" name="GetIPVoiceSeatsInfoResult" nillable="true" type="q69:ArrayOfRecentOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCounterpathInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCounterpathInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.CSO" minOccurs="0" name="GetCounterpathInfoResult" nillable="true" type="q70:ArrayOfRecentOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCustomerOrdersResult" nillable="true" type="q71:ArrayOfCustomerOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeAllCustomerOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeAllCustomerOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GeAllCustomerOrdersResult" nillable="true" type="q72:ArrayOfCustomerOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrdersByStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrdersByStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCustomerOrdersByStatusResult" nillable="true" type="q73:ArrayOfCustomerOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderHistoryItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderHistoryItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCustomerOrderHistoryItemsResult" nillable="true" type="q74:ArrayOfCustomerOrderHistoryItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="customerAccountNos" nillable="true" type="q75:ArrayOfint" />
+        <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCustomerOrderDetailsResult" nillable="true" type="q76:CustomerOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderNameByGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderNameByGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCustomerOrderNameByGuidResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemForLineItemGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderLineItemGUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addSpecificItems" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemForLineItemGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOrderLineItemForLineItemGuidResult" nillable="true" type="q77:OrderLineGeneralItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrderIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCustomerOrderIDsResult" nillable="true" type="q78:ArrayOfCustomerOrderID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderGUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOrderLineItemsResult" nillable="true" type="q79:ArrayOfOrderLineGeneralItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemsForOrderByStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderGUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lineItemStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemsForOrderByStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOrderLineItemsForOrderByStatusResult" nillable="true" type="q80:ArrayOfOrderLineGeneralItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemsForOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemsForOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOrderLineItemsForOrderResult" nillable="true" type="q81:ArrayOfOrderLineGeneralItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewRetryOrderLineItemsForOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewRetryOrderLineItemsForOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetNewRetryOrderLineItemsForOrderResult" nillable="true" type="q82:ArrayOfOrderLineGeneralItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineSpecificItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderLineItemGUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineSpecificItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOrderLineSpecificItemsResult" nillable="true" type="q83:ArrayOfOrderLineSpecificItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderLineItemGUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLineItemCommentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOrderLineItemCommentsResult" nillable="true" type="q84:ArrayOfLineItemComment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrderStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderLineGeneralItemStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineItemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderLineGeneralItemStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrderLineGeneralItemStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderLineItemsForLocalDid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.CSO" minOccurs="0" name="ListLineItemUpdate" nillable="true" type="q85:ArrayOfLineItemUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderLineItemsForLocalDidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrderLineItemsForLocalDidResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderLineItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.CSO" minOccurs="0" name="ListLineItemSpecificUpdate" nillable="true" type="q86:ArrayOfLineItemUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderLineItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrderLineItemsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salesforceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRecordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WildCardSearchForAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchTerm" nillable="true" type="xs:string" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.AccountSearch" minOccurs="0" name="sortDirection" type="q87:SortDirection" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.AccountSearch" minOccurs="0" name="sortColumn" type="q88:AccountSortColumn" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.AccountSearch" minOccurs="0" name="accountRecordTypes" nillable="true" type="q89:ArrayOfAccountRecordType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WildCardSearchForAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.AccountSearch" minOccurs="0" name="WildCardSearchForAccountResult" nillable="true" type="q90:AccountSearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProjectDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="projectNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProjectDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.IS_Reports" minOccurs="0" name="GetProjectDetailsResult" nillable="true" type="q91:ProjectData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactRoleList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activeOnly" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactRoleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetContactRoleListResult" nillable="true" type="q92:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactRolesCheckedByContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactRolesCheckedByContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetContactRolesCheckedByContactResult" nillable="true" type="q93:ArrayOfAccountContactRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountsByAccountNumberAndAccountType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="accountIdsByAccountType" nillable="true" type="q94:ArrayOfKeyValueOfAccountTypeArrayOfstringWRRY4cOh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountsByAccountNumberAndAccountTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAccountsByAccountNumberAndAccountTypeResult" nillable="true" type="q95:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertContactForMultipleAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="updateContactRecord" nillable="true" type="q96:Contact" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="contactRoles" nillable="true" type="q97:ArrayOfAccountContactRoles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertContactForMultipleAccountsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCasesByCustomerOrderId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCasesByCustomerOrderIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetCasesByCustomerOrderIdResult" nillable="true" type="q98:ArrayOfCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThirdPartyTicketNumberByCaseNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesforceCaseNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thirdPartTicketNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThirdPartyTicketNumberByCaseNumberResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThirdPartyTicketNumberByTroubleReportInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="requestData" nillable="true" type="q99:PartnerCaseIncidentUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThirdPartyTicketNumberByTroubleReportInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="UpdateThirdPartyTicketNumberByTroubleReportInfoResult" nillable="true" type="q100:PartnerCaseIncidentUpdateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainBillingContactRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainBillingContactRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetMainBillingContactRolesResult" nillable="true" type="q101:ArrayOfMainBillingContactRoles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountInActiveStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountInActiveStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountInActiveStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTAMEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTAMEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetTAMEmailResult" nillable="true" type="q102:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTSAEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTSAEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetTSAEmailResult" nillable="true" type="q103:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkPremiseEngage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkPremiseEngageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="checkPremiseEngageResult" nillable="true" type="q104:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsForAccountHierarchy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsForAccountHierarchyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetContactsForAccountHierarchyResult" nillable="true" type="q105:ArrayOfContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactNameByContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contactId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactNameByContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContactNameByContactIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCaseForAllCustomerOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="domainCase" nillable="true" type="q106:Case" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCaseForAllCustomerOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateCaseForAllCustomerOrdersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentIdOfPendingDisconnect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentIdOfPendingDisconnectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetInstrumentIdOfPendingDisconnectResult" nillable="true" type="q107:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChildAccountsByParentAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="accountNos" nillable="true" type="q108:ArrayOfint" />
+        <xs:element xmlns:q109="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parentAccountNos" nillable="true" type="q109:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChildAccountsByParentAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetChildAccountsByParentAccountResult" nillable="true" type="q110:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsFedRampAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsFedRampAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsFedRampAccountResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupportDocumentsByLibrary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="libraryName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupportDocumentsByLibraryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.ContentLibrary" minOccurs="0" name="GetSupportDocumentsByLibraryResult" nillable="true" type="q111:ArrayOfSupportDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStreamByContentDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStreamByContentDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.microsoft.com/Message" name="GetDocumentStreamByContentDocumentResult" type="q112:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStreamById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStreamByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.microsoft.com/Message" name="GetDocumentStreamByIdResult" type="q113:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissionSets">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissionSetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetPermissionSetsResult" nillable="true" type="q114:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSalesforceCommunityUserAndContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="salesforceUser" nillable="true" type="q115:SalesforceUser" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="contactPermissions" nillable="true" type="q116:ContactPermissions" />
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q117="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permissionSetIds" nillable="true" type="q117:ArrayOfstring" />
+        <xs:element minOccurs="0" name="AccountContactRole" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewFeature" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSalesforceCommunityUserAndContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="CreateSalesforceCommunityUserAndContactResult" nillable="true" type="q118:UserUpsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceUsersByFederationIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="salesforceUser" nillable="true" type="q119:SalesforceUser" />
+        <xs:element minOccurs="0" name="federationIdentifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceUsersByFederationIdentifierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSalesforceUsersByFederationIdentifierResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceCommunityUserAndContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="salesforceUser" nillable="true" type="q120:SalesforceUser" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="contactPermissions" nillable="true" type="q121:ContactPermissions" />
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q122="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permissionSetIds" nillable="true" type="q122:ArrayOfstring" />
+        <xs:element minOccurs="0" name="AccountContactRole" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssociatedAccount" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceCommunityUserAndContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="UpdateSalesforceCommunityUserAndContactResult" nillable="true" type="q123:UserUpsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactActiveStatusByAdfsGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactActiveStatusByAdfsGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateContactActiveStatusByAdfsGuidResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceCommunityUserActiveStatusByFederationIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="clearFederationID" type="xs:boolean" />
+        <xs:element minOccurs="0" name="usernameOverride" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceCommunityUserActiveStatusByFederationIdentifierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSalesforceCommunityUserActiveStatusByFederationIdentifierResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityProfileListByLicenseName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityProfileListByLicenseNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCommunityProfileListByLicenseNameResult" nillable="true" type="q124:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityProfileListByLicenseNameAndType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isCustom" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityProfileListByLicenseNameAndTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCommunityProfileListByLicenseNameAndTypeResult" nillable="true" type="q125:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityPermissionSetsByLicenseName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userCustomSettingName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityPermissionSetsByLicenseNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetCommunityPermissionSetsByLicenseNameResult" nillable="true" type="q126:ArrayOfPermissions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityPermissionSetsByCommunityName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="communityName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommunityPermissionSetsByCommunityNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetCommunityPermissionSetsByCommunityNameResult" nillable="true" type="q127:ArrayOfPermissions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUserLicenses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUserLicensesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllUserLicensesResult" nillable="true" type="q128:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserClaimValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="claimTypes" nillable="true" type="q129:ArrayOfUserClaimType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserClaimValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetUserClaimValuesResult" nillable="true" type="q130:UserClaimResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.Enums" minOccurs="0" name="accountType" type="q131:AccountType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetUsersByAccountResult" nillable="true" type="q132:ArrayOfAccountUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRoleByAccountAndPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.Enums" minOccurs="0" name="portalRole" type="q133:UserRolePortalRole" />
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.Enums" minOccurs="0" name="portalType" type="q134:UserRolePortalType" />
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRoleByAccountAndPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserRoleByAccountAndPortalResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCommunityRegistrationCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="registrationInfo" nillable="true" type="q135:PartnerRegistration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartnerCommunityRegistrationCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePartnerCommunityRegistrationCaseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonADFSCommunityUsersByUserLicenseName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="licenseNames" nillable="true" type="q136:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonADFSCommunityUsersByUserLicenseNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetNonADFSCommunityUsersByUserLicenseNameResult" nillable="true" type="q137:ArrayOfUserDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceCommunityUserAdfsInfoById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesforceUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSalesforceCommunityUserAdfsInfoByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="UpdateSalesforceCommunityUserAdfsInfoByIdResult" nillable="true" type="q138:UserUpsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByFederationIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByFederationIdentifierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetUserByFederationIdentifierResult" nillable="true" type="q139:UserDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersBySalesforceAccountId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersBySalesforceAccountIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceUserService" minOccurs="0" name="GetUsersBySalesforceAccountIdResult" nillable="true" type="q140:ArrayOfAccountUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTeamForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTeamForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTeamForUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatedAccountsByContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatedAccountsByContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAssociatedAccountsByContactResult" nillable="true" type="q141:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatedAccountsByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatedAccountsByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAssociatedAccountsByUserResult" nillable="true" type="q142:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAssociatedAccountContactRelation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="salesforceUser" nillable="true" type="q143:SalesforceUser" />
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="AccountList" nillable="true" type="q144:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAssociatedAccountContactRelationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAssociatedAccountContactRelationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountContactRoleList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountContactRoleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAccountContactRoleListResult" nillable="true" type="q145:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAssociatedAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q146="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AccountList" nillable="true" type="q146:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAssociatedAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveAssociatedAccountsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountRelatedContactRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContactId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountRelatedContactRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAccountRelatedContactRolesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrimaryAccountByUserName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrimaryAccountByUserNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPrimaryAccountByUserNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeZones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeZonesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetTimeZonesResult" nillable="true" type="q147:ArrayOfNotificationTimeZone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPersonGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPersonGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXMPersonGuidResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPersonId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPersonIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXMPersonIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactHasUserInXmatters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactHasUserInXmattersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContactHasUserInXmattersResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByAdfsGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByAdfsGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetContactsByAdfsGuidResult" nillable="true" type="q148:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateXMPerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateXMPersonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateXMPersonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateXMPersonByContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContactId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateXMPersonByContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateXMPersonByContactIdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateXMPersonAndUpdateContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="primaryContactId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateXMPersonAndUpdateContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateXMPersonAndUpdateContactsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNotificationContactsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationProfileByContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContactId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationProfileByContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNotificationProfileByContactIdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociateProfiletoContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociateProfiletoContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssociateProfiletoContactResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DissociateNotificationContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DissociateNotificationContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DissociateNotificationContactsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMPersonId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNotificationProfileResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactWithXMPersonId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="contactIds" nillable="true" type="q149:ArrayOfstring" />
+        <xs:element minOccurs="0" name="xmPersonId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactWithXMPersonIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateContactWithXMPersonIdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSFContactsFirstnameLastName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSFContactsFirstnameLastNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSFContactsFirstnameLastNameResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSFContactNameByContactID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contactid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSFContactNameByContactIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSFContactNameByContactIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPartnerContactExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="partnerContactId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPartnerContactExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsPartnerContactExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContactByPartnerContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="notificationContact" nillable="true" type="q150:NotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContactByPartnerContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="AddContactByPartnerContactIdResult" nillable="true" type="q151:NotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="notificationContact" nillable="true" type="q152:NotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpsertContactResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactByPartnerContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="partnerContactId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactByPartnerContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetContactByPartnerContactIdResult" nillable="true" type="q153:NotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByPartnerContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="partnerContactId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByPartnerContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetContactsByPartnerContactIdResult" nillable="true" type="q154:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByPartnerContactIdOrEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="partnerContactId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByPartnerContactIdOrEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetContactsByPartnerContactIdOrEmailResult" nillable="true" type="q155:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelatedContactsByContactId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contactId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelatedContactsByContactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetRelatedContactsByContactIdResult" nillable="true" type="q156:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllContactsByAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="limitSize" type="xs:int" />
+        <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllContactsByAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetAllContactsByAccountResult" nillable="true" type="q157:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPartnerPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPartnerPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXMPartnerPrefixResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPersonIdsByNotificationGroupId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="notificationGroupId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMPersonIdsByNotificationGroupIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetXMPersonIdsByNotificationGroupIdResult" nillable="true" type="q158:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMNotificationGroupNameById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="notificationGroupId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMNotificationGroupNameByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXMNotificationGroupNameByIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationGroupStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="notificationGroupId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" minOccurs="0" name="notificationGroupStatus" type="q159:NotificationGroupStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationGroupStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMProfileDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contactId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXMProfileDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetXMProfileDetailsResult" nillable="true" type="q160:ArrayOfKeyValueOfstringXMUserDetailswdi_SqLbu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountByProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedProduct" nillable="true" type="q161:ArrayOfstring" />
+        <xs:element xmlns:q162="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="excludedProduct" nillable="true" type="q162:ArrayOfstring" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountByProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetAccountByProductResult" nillable="true" type="q163:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactByProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="productAccount" nillable="true" type="q164:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactByProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetContactByProductResult" nillable="true" type="q165:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductStatusByAccountId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accoundId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductStatusByAccountIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetProductStatusByAccountIdResult" nillable="true" type="q166:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" minOccurs="0" name="GetAuditTypesResult" nillable="true" type="q167:ArrayOfXMAuditType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAudits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" minOccurs="0" name="audits" nillable="true" type="q168:ArrayOfXMAudit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAuditsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertAuditsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistinctAuditLogsByDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="offset" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistinctAuditLogsByDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" minOccurs="0" name="GetDistinctAuditLogsByDateResult" nillable="true" type="q169:ArrayOfXMAudit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByXMPersonGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmPersonGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsByXMPersonGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetContactsByXMPersonGuidResult" nillable="true" type="q170:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactForRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="contact" nillable="true" type="q171:NotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactForRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateContactForRolesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllContactsByActiveXMProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="limitSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllContactsByActiveXMProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetAllContactsByActiveXMProfileResult" nillable="true" type="q172:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelatedContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xmPersonGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelatedContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" minOccurs="0" name="GetRelatedContactsResult" nillable="true" type="q173:ArrayOfNotificationContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpportunity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="opportunityId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpportunityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetOpportunityResult" nillable="true" type="q174:Opportunity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteDetailsByQuoteId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteDetailsByQuoteIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetQuoteDetailsByQuoteIdResult" nillable="true" type="q175:Quote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteLinesByQuoteIdAndQuoteTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quoteTemplateId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteLinesByQuoteIdAndQuoteTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetQuoteLinesByQuoteIdAndQuoteTemplateResult" nillable="true" type="q176:ArrayOfQuoteLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGoLiveAssetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGoLiveAssetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetProductGoLiveAssetListResult" nillable="true" type="q177:ProductGoLive" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGoLiveSubscriptionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGoLiveSubscriptionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain" minOccurs="0" name="GetProductGoLiveSubscriptionListResult" nillable="true" type="q178:ProductGoLive" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandingContentbyAccountNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+        <xs:element xmlns:q179="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="cssprop" nillable="true" type="q179:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandingContentbyAccountNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetBrandingContentbyAccountNumberResult" nillable="true" type="q180:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandingContentbyAdfsGUID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+        <xs:element xmlns:q181="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="cssprop" nillable="true" type="q181:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandingContentbyAdfsGUIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetBrandingContentbyAdfsGUIDResult" nillable="true" type="q182:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogoUrlByAccountNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogoUrlByAccountNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLogoUrlByAccountNumberResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountNoIfOnlyOneParentAccountbyAdfsGUID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adfsGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountNoIfOnlyOneParentAccountbyAdfsGUIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAccountNoIfOnlyOneParentAccountbyAdfsGUIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

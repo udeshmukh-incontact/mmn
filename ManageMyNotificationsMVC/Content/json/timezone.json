@@ -1,0 +1,110 @@
+﻿[
+  {
+    "key": "Asia/Hong_Kong",
+    "value": "(UTC+0800) Asia/Hong_Kong"
+  },
+  {
+    "key": "Asia/Jerusalem",
+    "value": "(UTC+0200) Asia/Jerusalem"
+  },
+  {
+    "key": "Australia/Sydney",
+    "value": "(UTC+1000) Australia/Sydney"
+  },
+  {
+    "key": "Canada/Atlantic",
+    "value": "(UTC-0400) Canada/Atlantic"
+  },
+  {
+    "key": "Canada/Central",
+    "value": "(UTC-0600) Canada/Central"
+  },
+  {
+    "key": "Canada/East-Saskatchewan",
+    "value": "(UTC-0600) Canada/East-Saskatchewan"
+  },
+  {
+    "key": "Canada/Eastern",
+    "value": "(UTC-0500) Canada/Eastern"
+  },
+  {
+    "key": "Canada/Mountain",
+    "value": "(UTC-0700) Canada/Mountain"
+  },
+  {
+    "key": "Canada/Newfoundland",
+    "value": "(UTC-0330) Canada/Newfoundland"
+  },
+  {
+    "key": "Canada/Pacific",
+    "value": "(UTC-0800) Canada/Pacific"
+  },
+  {
+    "key": "Canada/Saskatchewan",
+    "value": "(UTC-0600) Canada/Saskatchewan"
+  },
+  {
+    "key": "Canada/Yukon",
+    "value": "(UTC-0800) Canada/Yukon"
+  },
+  {
+    "key": "Europe/Paris",
+    "value": "(UTC+0100) Europe/Paris"
+  },
+  {
+    "key": "Europe/Stockholm",
+    "value": "(UTC+0100) Europe/Stockholm"
+  },
+  {
+    "key": "GMT",
+    "value": "(UTC+0000) GMT"
+  },
+  {
+    "key": "US/Alaska",
+    "value": "(UTC-0900) US/Alaska"
+  },
+  {
+    "key": "US/Aleutian",
+    "value": "(UTC-1000) US/Aleutian"
+  },
+  {
+    "key": "US/Arizona",
+    "value": "(UTC-0700) US/Arizona"
+  },
+  {
+    "key": "US/Central",
+    "value": "(UTC-0600) US/Central"
+  },
+  {
+    "key": "US/East-Indiana",
+    "value": "(UTC-0500) US/East-Indiana"
+  },
+  {
+    "key": "US/Eastern",
+    "value": "(UTC-0500) US/Eastern"
+  },
+  {
+    "key": "US/Hawaii",
+    "value": "(UTC-1000) US/Hawaii"
+  },
+  {
+    "key": "US/Indiana-Starke",
+    "value": "(UTC-0600) US/Indiana-Starke"
+  },
+  {
+    "key": "US/Michigan",
+    "value": "(UTC-0500) US/Michigan"
+  },
+  {
+    "key": "US/Mountain",
+    "value": "(UTC-0700) US/Mountain"
+  },
+  {
+    "key": "US/Pacific",
+    "value": "(UTC-0800) US/Pacific"
+  },
+  {
+    "key": "US/Samoa",
+    "value": "(UTC-1100) US/Samoa"
+  }
+]

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.SalesforceNotificationService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfNotificationTimeZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NotificationTimeZone" nillable="true" type="tns:NotificationTimeZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotificationTimeZone" nillable="true" type="tns:ArrayOfNotificationTimeZone" />
+  <xs:complexType name="NotificationTimeZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Timezone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationTimeZone" nillable="true" type="tns:NotificationTimeZone" />
+  <xs:complexType name="ArrayOfNotificationContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NotificationContact" nillable="true" type="tns:NotificationContact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotificationContact" nillable="true" type="tns:ArrayOfNotificationContact" />
+  <xs:complexType name="NotificationContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AccountRootParentIDs" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="AdfsGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactRole" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Deactivated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartnerContactId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMPersonGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMPersonId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMPersonName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationContact" nillable="true" type="tns:NotificationContact" />
+</xs:schema>

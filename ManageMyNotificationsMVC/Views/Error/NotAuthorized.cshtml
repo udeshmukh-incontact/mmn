@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Not Authorized";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    body {
+        display: block;
+    }
+</style>
+
+<h2>You are not authorized to access the requested resource.</h2>
+
+<div style="text-align: left; float: initial;">
+    <a id="manageLink" href="/Notifications">Go Back to Home Page</a>
+</div>
+@section sessiontimeout{
+    @Scripts.Render("~/bundles/sessiontimeout")
+}

@@ -1,0 +1,819 @@
+﻿.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+/*Social Media*/
+.incontact-socialicon{
+    color: #7f7f7f;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+
+
+.incontact-socialicon ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.incontact-socialicon li {
+    display: inline;
+    padding-left: 10px;
+}
+/***/
+/**forgot password page*/
+.incontact-header {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #00a1e1 !important;
+    border: 1px solid #e1e1e1;
+    height: 32px;
+    font-size: 1.2em;
+    padding: .3em .8em .3em .6em;
+}
+
+.incontact-header.border-box-sizing,
+.incontact-row.border-box-sizing,
+.incontact-display-label.border-box-sizing,
+.incontact-display-field.border-box-sizing {
+    box-sizing: border-box;
+}
+
+.incontact-display-field.actual-size {
+    display: block;
+}
+
+.new-button {
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 100%;
+    padding: 5px 15px;
+    width: auto;
+    border-radius:0;
+    background: -webkit-linear-gradient(#00a1e1,#00a1e1);
+    background: -moz-linear-gradient(#00a1e1,#00a1e1);
+    background: -o-linear-gradient(#00a1e1,#00a1e1);
+    background: linear-gradient(#00a1e1, #00a1e1);
+}
+.required-label:after {
+    content: "*";
+    color: #E68000;
+    font-weight: normal;
+}
+.error-message{
+    background-color: #E68000;
+    font-size: 14px;
+    padding: 10px;
+    color: white;
+    text-align:left;
+}
+.input-validation-error {
+    background-color: #fee !important;
+    border: 1px solid red;
+}
+.field-validation-error {
+    color: red;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.section-header {
+    background-color: #00A1E1;
+    /*border-radius:5px;*/
+    color: white;
+    font-weight: bold;
+    line-height: 2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0 10px 0 10px;
+}
+
+.section-header:hover {
+    cursor:pointer;
+}
+
+.section-header .collapse {
+    float: right;
+    font-size: 12px;
+}
+
+.section-body a {
+    color: #e68000;
+}
+
+.section-body .incontact-display-label, .section-body .incontact-display-field {
+    display: block;
+}
+
+/*Please ignore these methods as these should be the new */
+.page-section {
+    margin-bottom: 10px;
+    float: left;
+    clear: both;
+    width: 100%;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+       
+}
+
+.clear-both {
+    clear: both;
+}
+
+.save-cancel-button-group {
+    margin-top: 10px;
+    margin-left: 207px;
+}
+
+.incontact-modal-msg {
+    padding-bottom: 10px;
+}
+
+.incontact-display-button {
+    color: white; 
+    font-size: 14px; 
+    padding: 6px 12px; 
+    border: 1px solid transparent; 
+    text-align: center; 
+    margin: 0 2px 0 20px; 
+    text-transform: capitalize; 
+    border-radius: 25px; 
+    display: inline-block; 
+    width: 70px; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 1.55em; 
+}
+
+/*incontact-blue-action-button*/
+
+/*buttons*/
+.incontact-blue-action-button {
+    background-color: #00a1e1;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    text-align: center;
+    margin: 0 2px 0 2px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.incontact-blue-action-button:hover { 
+    background-color: #E68000;
+    color: white;
+}
+
+.incontact-blue-action-button:focus { 
+    color: #333;
+}
+
+
+.incontact-white-action-button, .k-button.k-upload-button {
+    box-sizing: border-box;
+    color: rgb(230, 128, 0);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    column-rule-color: rgb(230, 128, 0);
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(230, 128, 0);
+    border-radius: 25px 25px 25px 25px;
+    margin: 0 2px 0 2px;
+    outline: rgb(230, 128, 0) none 0;
+    padding: 4px 30px;
+    transition: all 0.25s ease 0s;
+    cursor: pointer;
+     
+}
+
+.incontact-white-action-button:hover, .k-button:hover { 
+    color: rgb(255, 255, 255); 
+    background: rgb(230, 128, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    text-decoration: none;
+}
+
+.incontact-white-action-button.bottom-spacing {
+    margin-bottom: 4px;
+}
+
+.incontact-display-field.align-with-label {
+    margin-top: -5px;
+}
+
+.incontact-button-wider{
+    padding: 5px 45px;
+}
+
+
+/*make buttons built from <a> tags look like <input>
+    The anchor tags are slightly shorter than input
+*/
+a.incontact-blue-action-button, a.incontact-white-action-button, a.incontact-blue-action-button:hover, a.incontact-white-action-button:hover {
+    text-decoration: none;
+}
+
+.incontact-button-blue {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 34px;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 125.625px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 62.8125px 17px;
+    transform-origin: 62.8125px 17px;
+    background: rgb(0, 166, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(0, 166, 255);
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 6px 0px;
+}
+
+.incontact-button-blue-text {
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 2.5px 7px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 2.5px 7px;
+    border: 0px none rgb(255, 255, 255);
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+
+.incontact-button-blue:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    column-rule-color: rgb(51, 51, 51);
+    perspective-origin: 62.8125px 17px;
+    transform-origin: 62.8125px 17px;
+    background: #E68000; none repeat scroll 0% 0% / auto padding-box border-box;
+    outline: rgb(51, 51, 51) none 0px;
+}
+
+
+
+/*Document Section*/
+.empty-grid, .empty-data-message, .info-message
+{
+    background-color: #84c4d2;
+    font-size: 14px;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align:left;
+    font-weight: bold;
+}
+
+.info-message.rfe-status-label {
+    text-align: initial;
+    position: absolute;
+    right: 1em;
+    padding: 8px;
+}
+
+/*forms*/
+.incontact-display-label {
+    padding: 0 10px 10px 0;
+    vertical-align: top;
+    font-weight: bold;
+    width: 175px;
+    min-height: 35px;
+    color:#4B4f54 ;
+    text-align: right;
+    float: left;
+}
+
+.incontact-display-label.default-width {
+    width: initial;
+}
+
+.incontact-display-label.border-box-sizing label {
+    padding-right: 0px;
+}
+
+.incontact-display-field, .k-filename {
+    color: #6a737b;
+    min-height: 35px;
+    padding: 0 0 10px 0;
+    vertical-align: top;
+    text-align: left;
+    display: table;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.incontact-display-field.center {
+    width: 50%;
+    margin: auto;
+}
+
+.incontact-editor-label {
+    display: block;
+    padding: .25em .5em .25em 0;
+    font-weight: bold;
+    width: 200px;
+    color: #4B4f54;
+    text-align: left;
+}
+
+.incontact-editor-field {
+    display: block;
+    padding: 0 0 .5em 0;
+    vertical-align: top;
+    max-width: 562px;
+}
+
+/*Generic*/
+legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align:left;
+    text-transform: uppercase;
+
+}
+
+.incontact-button-default{
+    color: #d25e00;
+    background-color: #fff;
+}
+
+.vpadding-20{
+    margin: 20px 0 20px 0;
+}
+
+.hpadding-20{
+    margin: 0 20px 0 20px;
+}
+
+.incontact-blue-text{
+    color: #0078B4;
+}
+
+a.incontact-orange-text{
+    text-decoration: none;
+    display: block;
+    clear: both;
+    color: rgb(210, 94,0);
+    padding-top: 5px;
+}
+
+.success-message{
+    background-color: #A20077;
+    font-size: 14px;
+    padding: 10px;
+    color: white;
+    font-weight: normal;
+     margin-bottom: 10px;
+}
+
+/*Contact us styles*/
+
+.incontact-contactus-label{
+    padding-right: 20px;
+    float: left;
+    width: 44%;
+}
+
+/*Filters*/
+
+.incontact-filter-header{
+    padding-left:1em; 
+    padding-top: 4px;
+    font-weight:bold;
+
+}
+
+.incontact-row {
+    width: 100%;
+    clear: both;
+}
+
+div.incontact-row .incontact-two-column-first-column, .incontact-two-column .left {
+    float: left;
+    width: 50%;
+}
+
+div.incontact-row .incontact-two-column-second-column, .incontact-two-column .right {
+    float: right;
+    width: 50%;
+}
+
+
+
+div.incontact-row .incontact-two-column-first-column-small{
+    float: left;
+    width: 45%;
+}
+
+div.incontact-row .incontact-two-column-second-column-large{
+    float: right;
+    width: 55%;
+}
+
+.input-two-column {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+}
+
+div.incontact-row .incontact-padding,
+div.incontact-row.incontact-padding,
+span.incontact-padding,
+.incontact-display-field.incontact-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.incontact-severity1-label {
+    color: #a20077; 
+    font-size: .8em;
+    font-weight: bold;
+}
+
+
+.incontact-filter {
+    float: left;
+    text-align: left;
+    width: 210px;
+    column-rule-color: rgb(35, 35, 35);
+    perspective-origin: 105px 123.5px;
+    transform-origin: 105px 123.5px;
+    background: rgb(0, 161, 225) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 0px none rgb(35, 35, 35);
+    border-right: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+    border-left: 1px solid rgb(225, 225, 225);
+    margin: 0px 0px 5px;
+    outline: rgb(35, 35, 35) none 0px;
+    padding: 4px 0px 0px;
+}
+
+.incontact-filter-header a{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: left;
+}
+
+.incontact-filter-header label{
+    color: rgb(255, 255, 255);
+    height: 25px;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+
+.incontact-filter-toggle{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    float: right;
+    height: 21px;
+    text-align: left;
+    width: 16.1875px;
+    padding: 0px 11.2px 0px 0px;
+}
+
+.incontact-filter-items{
+    color: rgb(35, 35, 35);
+    height: 14px;
+    text-align: left;
+    width: 208px;
+    padding: 7px 0px;
+}
+
+.incontact-filter-items a{
+    color: rgb(75, 79, 84);
+    cursor: pointer;
+    float: left;
+    width: 208px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    outline: rgb(75, 79, 84) none 0px;
+    padding: 4px 0px 4px 20px;
+}
+
+.incontact-filter-items a:hover{
+    background-color: #84c4d2 ;
+    color:#FFFFFF;
+    
+}
+
+.incontact-filter-items a[data-selected=true], .filter-category a[data-selected=true]:hover
+{
+    background-color: #F2F2F2;
+    background-repeat: no-repeat;
+    color: #E68000;
+    background-image: url(/content/images/check_circle.png);
+    background-position:left;
+    background-size: 16px 16px;
+    font-weight: bold;
+}
+
+.incontact-filter-product-container{
+    background-color: #fff;
+}
+
+.incontact-treeview-item-white{
+    background-color:#fff;
+}
+
+
+.incontact-treeview-item-white.k-item:hover{
+    background-color: #fff;
+    color: #000;
+}
+.incontact-light-orange,
+.page-section a.incontact-light-orange {
+    color: #e68000;
+}
+
+/* popup with alternating rows*/
+.incontact-repeater-line {
+    width: 100%;
+    color: #777;
+}
+
+.incontact-repeater-header {
+    color: #777;
+}
+
+.incontact-repeater-line:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.incontact-repeater-line .small-column, 
+.incontact-repeater-header .small-column {
+    width: 100px;
+    float: left;
+}
+
+.incontact-repeater-line .large-column, 
+.incontact-repeater-header .large-column {
+    width: 400px;
+    float: right;
+}
+
+.incontact-repeater-header {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+/* attachment styles */
+.incontact-attachment-header ul.k-upload-files {
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    line-height: inherit;
+    padding: 5px;
+}
+
+.incontact-attachment-header ul.k-upload-files li:last-of-type {
+    border-bottom: 0px;
+}
+
+.incontact-attachment-header .long {
+    width: 500px;
+}
+
+
+.incontact-editor-field.full-width,
+.incontact-editor-field.full-width input[type=text].long,
+/* Handle the specific case of making the Account drop down larger only on the Create Case page. */
+.incontact-editor-field.full-width span.k-widget.k-combobox.k-header  {
+    width: 100%!important;
+    max-width: none;
+}
+
+textarea.incontact-wide-textarea {
+    width: 100%;
+    height: 200px;
+    max-width: none;
+    padding-bottom: 5px;
+}
+
+textarea.incontact-full-textarea {
+    width: 100%;
+}
+
+.incontact-checkbox-inline {
+    margin-top:4px;
+    margin-right: 4px;
+}
+
+.incontact-editor-label.nowrap-left,
+.incontact-display-field.nowrap-left {
+    width:initial;
+}
+
+.incontact-editor-label.float-left {
+    float: left;
+    width: inherit;
+}
+
+label.nowrap-left {
+    float: left;
+    text-align: left;
+    white-space: nowrap;
+}
+
+input.align-top {
+    vertical-align: top;
+}
+
+.incontact-bold{
+    font-weight: bold;
+}
+
+.incontact-basic-table tr td:first-child {
+    font-weight: bold;
+}
+
+.incontact-account-label{
+    width: auto; 
+    padding-top:5px;
+}
+
+.incontact-overflow-break, .trust-event-section > div, .maintenance-event > div {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+}
+
+textarea.incontact-comment-box
+{
+    width:536px;
+    height:100px;
+}
+
+.partner-product-selection input.k-textbox{
+    width: 250px;
+}
+
+.partner-product-selection textarea{
+    min-width: 250px;
+    min-height: 100px;
+}
+
+.section-container{
+    background-color: #F1F1F1;
+    padding: 5px 20px;
+}
+
+.section-container .sub-line-item {
+    padding: 5px 0 5px 10px;
+}
+
+.page-sub-section {
+    margin: 2px 0 5px 0;
+}
+
+.incontact-disclaimer {
+color: #4b4f54;     
+}
+
+.confirm-container {
+    padding: 10px;
+}
+
+.confirm-msg {
+    padding-bottom: 15px;
+}
+
+/*Session TimeOut Page Styles*/
+
+.sessiontimeout{
+    font-family: effra, Open Sans, sans-serif !important;
+    color:#E68000;
+    text-align: left;
+    font-size:30px;
+    padding-top: 25px;
+    margin-bottom:30px;
+    text-transform: uppercase;
+}
+
+.sessioninactivity{
+    font-family: effra, Open Sans, sans-serif !important;
+    color:white;
+    text-align: left;
+    font-size:16.75px;
+    background-color:#84C4D2;
+    width: 675px;
+    padding-left: 5px;
+
+}
+
+.clickhere{
+    font-family: effra, Open Sans, sans-serif !important;
+    color:#E68000;
+    text-align: left;
+    font-size:19px;
+    padding-top: 30px;
+    margin-bottom:30px;
+}
+
+.clickhere > a {
+    color: #E68000;
+    font-weight:bold;
+}
+
+.clickhere > span {
+    font-family: effra, Open Sans, sans-serif !important;
+    color:#4B4F54;
+}
+
+img.highlight {
+    border-radius: 10px;
+    border: solid 1px white;
+}
+
+/* impersonation styles */
+
+.impersonation-container{
+    background-color: #A20077;
+    color: white;
+}
+
+/* Print styles*/
+
+.incontact-editor-section-header {
+    border-bottom: 2px solid #e1e1e1;
+    float: left;
+    clear: both;
+    font-size: 1.25em;
+    padding: 0 0 0 1em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.k-loading-image {
+    background-image: url('../../../../../../Content/kendo/Default/loading-spinner.gif');
+}
+
+div.incontact-editor-field.file-input ul.k-upload-files li span.k-filename {
+    width: 90%;
+    margin-left: 0px;
+}
+
+div.incontact-editor-field.file-input ul.k-upload-files > li.k-file > span.k-icon {
+    visibility: hidden;
+    display: none;
+}
+
+div.incontact-editor-field.file-input ul.k-upload-files li strong.k-upload-status {
+    position: absolute;
+    width: 10%;
+}
+
+div.incontact-display-field.description-container.no-wordbreak {
+    -ms-hyphens: none;
+}
+
+div.incontact-editor-field.role-checkboxes {
+    padding-top: 5px;
+}
+
+/* impersonation styles */
+
+.impersonation-container {
+    background-color: #A20077;
+    color: white;
+}
+.impersonation-disable {
+    cursor: not-allowed !important;
+    
+}

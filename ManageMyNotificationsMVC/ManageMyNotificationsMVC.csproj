@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D614ACF2-1F97-4D08-ADD4-96DDA6F2D6F5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManageMyNotificationsMVC</RootNamespace>
+    <AssemblyName>ManageMyNotificationsMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>50443</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+    <CodeAnalysisRuleSet>..\.sonarlint\managemynotificationscsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\.sonarlint\managemynotificationscsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\.sonarlint\managemynotificationscsharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="InContact.Common.Branding, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InContact.Common.Branding.1.0.1.1\lib\net45\InContact.Common.Branding.dll</HintPath>
+    </Reference>
+    <Reference Include="InContact.Common.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InContact.Common.UI.1.0.0.31-alpha\lib\net45\InContact.Common.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="InContact.Common.Utilities, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="InContact.Common.Web, Version=3.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InContact.Common.Web.3.1.3\lib\net45\InContact.Common.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.3.0\lib\net45\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory, Version=3.3.2.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Factory.3.3.2\lib\net45\Ninject.Extensions.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.3.1\lib\net45\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common.WebHost, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.WebHost.3.3.1\lib\net45\Ninject.Web.Common.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.3.0\lib\net45\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivator.1.4\lib\NETFramework40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\inContactUIConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\ElmahWrapper.cs" />
+    <Compile Include="Common\IElmahWrapper.cs" />
+    <Compile Include="Common\UnhandledErrorAttribute.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Converters\DeviceConverter.cs" />
+    <Compile Include="Controllers\Converters\PersonConverter.cs" />
+    <Compile Include="Controllers\Converters\TimeFrameConverter.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\NotificationManagerController.cs" />
+    <Compile Include="Controllers\SessionTimeOutController.cs" />
+    <Compile Include="ExtentionMethods\IdentityExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Device\Device.cs" />
+    <Compile Include="Models\Device\TimeFrame.cs" />
+    <Compile Include="Models\NotificationManagerViewModel.cs" />
+    <Compile Include="Models\Person\Persons.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\.sonarlint\managemynotifications\CSharp\SonarLint.xml">
+      <Link>SonarLint.xml</Link>
+    </AdditionalFiles>
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Content.logo.png" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\Attachment.png" />
+    <Content Include="Content\images\btn_sidebarfilter_close.png" />
+    <Content Include="Content\images\case-management2.png" />
+    <Content Include="Content\images\check_circle.png" />
+    <Content Include="Content\images\close_circle.png" />
+    <Content Include="Content\images\Customer.png" />
+    <Content Include="Content\images\documentIcons\icom_image.png" />
+    <Content Include="Content\images\documentIcons\icon_csv.png" />
+    <Content Include="Content\images\documentIcons\icon_email.png" />
+    <Content Include="Content\images\documentIcons\icon_excel.png" />
+    <Content Include="Content\images\documentIcons\icon_folder.png" />
+    <Content Include="Content\images\documentIcons\icon_folder_up.png" />
+    <Content Include="Content\images\documentIcons\icon_pdf.png" />
+    <Content Include="Content\images\documentIcons\icon_powerpoint.png" />
+    <Content Include="Content\images\documentIcons\icon_unknownFileType.png" />
+    <Content Include="Content\images\documentIcons\icon_visio.png" />
+    <Content Include="Content\images\documentIcons\icon_word.png" />
+    <Content Include="Content\images\ellipsis-grey.png" />
+    <Content Include="Content\images\ellipsis-white.png" />
+    <Content Include="Content\images\Email.png" />
+    <Content Include="Content\images\error-icon.png" />
+    <Content Include="Content\images\Get-Info-B-icon2.png" />
+    <Content Include="Content\images\Get_Adobe_Acrobat_Reader_DC_web_button_158x39.fw.png" />
+    <Content Include="Content\images\grey-gear.png" />
+    <Content Include="Content\images\grfx_dropmenu_whitearrow.png" />
+    <Content Include="Content\images\grfx_megamenu_arrow.png" />
+    <Content Include="Content\images\Healthy.png" />
+    <Content Include="Content\images\HomePage-bw.png" />
+    <Content Include="Content\images\icon-red-x.png" />
+    <Content Include="Content\images\icon-search.png" />
+    <Content Include="Content\images\icon_attachment.png" />
+    <Content Include="Content\images\icon_check_mark.png" />
+    <Content Include="Content\images\icon_check_mark_orange.png" />
+    <Content Include="Content\images\icon_email.png" />
+    <Content Include="Content\images\icon_go_paperless.png" />
+    <Content Include="Content\images\icon_help.png" />
+    <Content Include="Content\images\icon_kb_article.png" />
+    <Content Include="Content\images\icon_orange_bookmark.png" />
+    <Content Include="Content\images\icon_print.png" />
+    <Content Include="Content\images\icon_teal_bookmark.png" />
+    <Content Include="Content\images\in-contact-logo.png" />
+    <Content Include="Content\images\inContact-Case-Feed.png" />
+    <Content Include="Content\images\inContactU2.png" />
+    <Content Include="Content\images\incontact_logo.png" />
+    <Content Include="Content\images\KB-Article.png" />
+    <Content Include="Content\images\knowledge2.png" />
+    <Content Include="Content\images\loading-image.gif" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\NotDeployed.png" />
+    <Content Include="Content\images\online-bill2.png" />
+    <Content Include="Content\images\orange-agt-icon.png" />
+    <Content Include="Content\images\PerformanceIssue.png" />
+    <Content Include="Content\images\powered_by_inContact_LiveTalk.png" />
+    <Content Include="Content\images\redDownwardAngleQuotes.png" />
+    <Content Include="Content\images\ringcentral_logo.png" />
+    <Content Include="Content\images\search-icon.png" />
+    <Content Include="Content\images\SEN_sidemenu_logo.png" />
+    <Content Include="Content\images\ServiceDisruption.png" />
+    <Content Include="Content\images\settings-gear.png" />
+    <Content Include="Content\images\Spinner-1s-200px.gif" />
+    <Content Include="Content\images\success-icon.png" />
+    <Content Include="Content\images\switch-accounts.png" />
+    <Content Include="Content\images\trust2.png" />
+    <Content Include="Content\images\vz_sidemenu_logo.png" />
+    <Content Include="Content\images\white-dot.png" />
+    <Content Include="Content\inContact.UI\2016.2\font-awesome.css" />
+    <Content Include="Content\inContact.UI\2016.2\font-awesome.min.css" />
+    <Content Include="Content\inContact.UI\2016.2\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\inContact.UI\2016.2\images\incontact_logo_sm.png" />
+    <Content Include="Content\inContact.UI\2016.2\inContact.UI.boostrap.css" />
+    <Content Include="Content\inContact.UI\2016.2\inContact.UI.common.css" />
+    <Content Include="Content\inContact.UI\2016.2\inContact.UI.kendo.css" />
+    <Content Include="Content\inContact.UI\2016.2\inContact.UI.Legacy.css" />
+    <Content Include="Content\inContact.UI\2016.2\inContact.UI.mvc.css" />
+    <Content Include="Content\inContact.UI\2016.2\inContact.UI.spreadsheet.css" />
+    <Content Include="Content\kendo\Default\editor.png" />
+    <Content Include="Content\kendo\Default\imagebrowser.png" />
+    <Content Include="Content\kendo\Default\indeterminate.gif" />
+    <Content Include="Content\kendo\Default\loading-image.gif" />
+    <Content Include="Content\kendo\Default\loading-spinner.gif" />
+    <Content Include="Content\kendo\Default\loading.gif" />
+    <Content Include="Content\kendo\Default\loading_2x.gif" />
+    <Content Include="Content\kendo\Default\markers.png" />
+    <Content Include="Content\kendo\Default\markers_2x.png" />
+    <Content Include="Content\kendo\Default\slider-h.gif" />
+    <Content Include="Content\kendo\Default\slider-v.gif" />
+    <Content Include="Content\kendo\Default\sprite.png" />
+    <Content Include="Content\kendo\Default\sprite_2x.png" />
+    <Content Include="Content\kendo\Default\sprite_blue.png" />
+    <Content Include="Content\kendo\Default\sprite_kpi.png" />
+    <Content Include="Content\kendo\Default\sprite_kpi_2x.png" />
+    <Content Include="Content\kendo\Default\sprite_white.png" />
+    <Content Include="Content\kendo\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="Content\kendo\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="Content\kendo\images\back.png" />
+    <Content Include="Content\kendo\images\kendoui.svg" />
+    <Content Include="Content\kendo\images\wp8_icons.png" />
+    <Content Include="Content\kendo\images\wp8_inverseicons.png" />
+    <Content Include="Content\kendo\kendo.common.core.min.css" />
+    <Content Include="Content\kendo\kendo.common.min.css" />
+    <Content Include="Content\kendo\kendo.default.min.css" />
+    <Content Include="Content\kendo\kendo.default.mobile.min.css" />
+    <Content Include="Content\kendo\textures\brushed-metal.png" />
+    <Content Include="Content\kendo\textures\dots1.png" />
+    <Content Include="Content\kendo\textures\dots10.png" />
+    <Content Include="Content\kendo\textures\dots11.png" />
+    <Content Include="Content\kendo\textures\dots12.png" />
+    <Content Include="Content\kendo\textures\dots13.png" />
+    <Content Include="Content\kendo\textures\dots2.png" />
+    <Content Include="Content\kendo\textures\dots3.png" />
+    <Content Include="Content\kendo\textures\dots4.png" />
+    <Content Include="Content\kendo\textures\dots5.png" />
+    <Content Include="Content\kendo\textures\dots6.png" />
+    <Content Include="Content\kendo\textures\dots7.png" />
+    <Content Include="Content\kendo\textures\dots8.png" />
+    <Content Include="Content\kendo\textures\dots9.png" />
+    <Content Include="Content\kendo\textures\glass-lighter.png" />
+    <Content Include="Content\kendo\textures\glass.png" />
+    <Content Include="Content\kendo\textures\highlight.png" />
+    <Content Include="Content\kendo\textures\hsv-gradient.png" />
+    <Content Include="Content\kendo\textures\hue.png" />
+    <Content Include="Content\kendo\textures\leather1.png" />
+    <Content Include="Content\kendo\textures\leather2.png" />
+    <Content Include="Content\kendo\textures\noise.png" />
+    <Content Include="Content\kendo\textures\stripe1.png" />
+    <Content Include="Content\kendo\textures\stripe2.png" />
+    <Content Include="Content\kendo\textures\stripe3.png" />
+    <Content Include="Content\kendo\textures\stripe4.png" />
+    <Content Include="Content\kendo\textures\stripe5.png" />
+    <Content Include="Content\kendo\textures\stripe6.png" />
+    <Content Include="Content\kendo\textures\transparency.png" />
+    <Content Include="Content\kendo\textures\transtexture.png" />
+    <Content Include="Content\NICE-CXone-Logo_Header.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Robots.txt" />
+    <Content Include="Scripts\ajaxAPI.js" />
+    <Content Include="Scripts\bootstrap-checkbox.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\grey-gear.png_Backup" />
+    <Content Include="Content\images\in-contact-logo.png_rename" />
+    <Content Include="Content\images\inContact_Logo.png_Backup1" />
+    <Content Include="Content\images\settings-gear.png_backup" />
+    <Content Include="Content\images\vz_sidemenu_logo.png_Backup" />
+    <Content Include="Content\inContact.UI\2016.2\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\inContact.UI\2016.2\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\inContact.UI\2016.2\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\inContact.UI\2016.2\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\inContact.UI\2016.2\fonts\FontAwesome.otf" />
+    <Content Include="Content\inContact.UI\2016.2\less\animated.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\bordered-pulled.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\core.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\fixed-width.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\font-awesome.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\icons.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\larger.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\list.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\mixins.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\path.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\rotated-flipped.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\screen-reader.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\stacked.less" />
+    <Content Include="Content\inContact.UI\2016.2\less\variables.less" />
+    <Content Include="Content\inContact.UI\2016.2\scss\font-awesome.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_animated.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_bordered-pulled.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_core.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_fixed-width.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_icons.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_larger.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_list.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_mixins.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_path.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_rotated-flipped.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_screen-reader.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_stacked.scss" />
+    <Content Include="Content\inContact.UI\2016.2\scss\_variables.scss" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="Content\kendo\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="Content\kendo\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="Content\kendo\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="Content\kendo\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="Content\kendo\images\kendoui.ttf" />
+    <Content Include="Content\kendo\images\kendoui.woff" />
+    <Content Include="Scripts\ie-polyfill.js" />
+    <Content Include="Scripts\inContact.Spinner.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-text.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\json\timezone.json" />
+    <Content Include="Content\json\notificationTab.json" />
+    <Content Include="Content\json\countryCodes.json" />
+    <Content Include="..\.sonarlint\managemynotificationscsharp.ruleset">
+      <Link>managemynotificationscsharp.ruleset</Link>
+    </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.zCustom.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
+    <Content Include="Scripts\kendo.core.min.js" />
+    <Content Include="Scripts\kendo.incontact.js" />
+    <Content Include="Scripts\ManageNotification.js" />
+    <Content Include="Scripts\ManageNotificationValidation.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\mvcfoolproof.unobtrusive.min.js" />
+    <Content Include="Scripts\MvcFoolproofJQueryValidation.min.js" />
+    <Content Include="Scripts\MvcFoolproofValidation.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\kendo.all.min.js.map" />
+    <Content Include="Scripts\kendo.core.min.js.map" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\SessionTimeout.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Web.config.token" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Notifications\Manage.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Error\NotAuthorized.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\IncompleteProfile.cshtml" />
+    <Content Include="Views\SessionTimeOut\SessionTimeOut.cshtml" />
+    <Content Include="Views\Shared\_timeframe.cshtml" />
+    <Content Include="Views\Shared\_DisableNotificationProfile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManageMyNotificationsBusinessLayer\ManageMyNotificationsBusinessLayer.csproj">
+      <Project>{0f0d9a14-f7ee-47f9-a00d-fdc203f41dcb}</Project>
+      <Name>ManageMyNotificationsBusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3351</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://sbhadani-t470.na.nice.com:50443/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- JG This is needed to copy the Roslyn Files to the Output folder of the Published Web Site-->
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <ItemGroup>
+      <RoslynFiles Include="$(CscToolPath)\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
+  </Target>
+  <!--End Roslyn File Copy Block-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

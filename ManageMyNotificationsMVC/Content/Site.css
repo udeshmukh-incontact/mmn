@@ -1,0 +1,835 @@
+﻿/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+body {
+    overflow: hidden;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 500px;
+}
+
+.navbar-inverse {
+    background-color: #009edb;
+    border-color: grey;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: White;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+    }
+
+.page-header .btn {
+    margin-top: 1em;
+}
+
+.web-site-footer {
+    background: #009edb;
+    position: fixed;
+}
+
+    .web-site-footer a {
+        color: #fff;
+    }
+
+        .web-site-footer a:hover {
+            color: #d0d2d3;
+        }
+
+select {
+    cursor: pointer;
+}
+.time-zone-input {
+    width: auto;
+}
+
+#manageNotificationProfileForm {
+    display: none;
+}
+
+.form-group.required .control-label:after {
+    content: "*";
+    color: red;
+}
+
+.notification-profile-div {
+    border: 5px solid rgb(0, 161, 225);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.notification-profile-Error-div {
+    padding-bottom: 0px;
+    color: orange;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.notification-profile-margin {
+    margin-bottom: 15px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.padding-left-80 {
+    padding-left: 80px;
+}
+
+.padding-right-0 {
+    padding-right: 0px;
+}
+
+.margin-right-6-2 {
+    margin-right: 6.2%;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 2px;
+    min-height: 100px;
+    background: #fff;
+}
+
+.device-row {
+    text-align: left;
+    line-height: normal;
+    margin-left: 5px;
+    width: 99%;
+}
+
+.loading-image {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
+
+.loader {
+    left: 50%;
+    margin-left: -4em;
+}
+
+.divul {
+    margin-bottom: 30px;
+}
+
+.device-button-group {
+    text-align: right;
+    padding-right: 50px;
+    bottom: 85px;
+    right: 120px;
+}
+
+    .device-button-group input {
+        margin-left: 10px;
+    }
+
+.add-device-row {
+    text-align: left;
+    overflow: hidden;
+    height: 34px;
+}
+
+#add-device[disabled] {
+    color: #333;
+}
+
+.device-types-div {
+    width: calc(100% - 22px);
+    float: right;
+}
+
+.margin-bottom-25 {
+    margin-bottom: 25px;
+}
+
+.time-frame-span {
+    width: 25%;
+    display: block;
+    float: left;
+    height: 34px;
+    padding-top: 1px;
+    min-width: 75px;
+}
+
+.manage-time-frame {
+    width: calc(75% - 20px);
+    margin-top: 4px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.width-70-perc {
+    width: 72%;
+}
+
+.text-error {
+    color: red;
+    font-weight: bold;
+}
+
+.modal {
+    text-align: left;
+}
+
+.input-group.date {
+    text-align: center;
+}
+
+.btn-group .btn {
+    background: #fff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    color: #444;
+    box-shadow: none;
+}
+
+    .btn-group .btn.active {
+        color: #09c;
+        border-color: #4db8db;
+        background-color: #f2fafc;
+    }
+
+.device-row .form-group {
+    margin-bottom: 0;
+}
+
+.form-group label.error {
+    color: #c00;
+    margin: 0.3em 0 0.4em 0;
+    padding: .3em .5em .3em .5em;
+    border-left: 1px solid;
+    background: #fff;
+    border: solid #ddd;
+    border-left-color: #db4d4d;
+    border-width: 1px 1px 1px 5px;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.when-model-popup {
+    width: calc( 100% + 1.2em );
+}
+
+#device-group {
+    overflow: auto;
+    width: 100%;
+}
+
+    #device-group > div {
+        width: 100%;
+    }
+
+    #device-group hr {
+        margin-top: 0;
+    }
+
+        #device-group hr:last-child {
+            margin-top: 0;
+        }
+
+.form-group label.error {
+    margin-bottom: 0;
+}
+
+.remove-device, .device-types[disabled], .remove-tab {
+    cursor: pointer;
+}
+
+#add-device[disabled], .manage-time-frame[disabled], .manage-time-frame[disabled]:hover, #submit-notification[disabled], #cancel-notification[disabled] {
+    cursor: pointer;
+    color: #555555;
+    background-color: #eeeeee;
+}
+
+.modal-header {
+    color: #fff;
+    background-color: #00a1e1;
+}
+
+span.time-frame-name {
+    display: inline-block;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.notification-group {
+    margin-bottom: 0 !important;
+}
+
+    .notification-group tbody {
+        display: block;
+        height: auto; /*if nos of rows is less than 3 the height would be adjusted as per the content*/
+        overflow: auto;
+    }
+
+        .notification-group thead, .notification-group tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed; /* even columns width , fix width of table too*/
+        }
+
+.on-head-if-body-scroll {
+    width: calc( 100% - 1.2em ) !important; /* scrollbar is average 1em/16px width, remove it from thead width }*/
+}
+
+.on-head-if-body-no-scroll {
+    width: 100% !important; /* scrollbar is average 1em/16px width, remove it from thead width }*/
+}
+
+.notification-group thead tr {
+    font-weight: bold;
+    background-color: #001D42;
+    color: #fff;
+}
+
+.odd-tr {
+    background-color: #f2f2f2;
+}
+
+#notificationGroups {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.notification-group thead td:hover {
+    background-color: #00598F;
+}
+
+.notification-group thead td.device-type {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.notification-group tbody td {
+    text-align: left
+}
+
+table.notification-group tbody ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+    table.notification-group tbody ul li {
+        list-style: none;
+        padding: 0 0 5px 0;
+    }
+
+        table.notification-group tbody ul li:last-child {
+            padding: 0;
+        }
+
+    table.notification-group tbody ul.bulletstyle {
+        padding-left: 15px;
+        margin-bottom: 0;
+    }
+
+    table.notification-group tbody ul li, .bulletstyle {
+        list-style: inherit;
+        padding: 0 0 5px 0;
+    }
+
+        table.notification-group tbody ul li:last-child, .bulletstyle {
+            list-style: inherit;
+            padding: 0;
+        }
+
+.notification-select {
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    margin-top: 2px;
+    margin-left: 1px;
+}
+
+td.sort-col, .bootstrap-checkbox, input[type=checkbox], span.sort-col {
+    cursor: pointer;
+}
+
+.bootstrap-checkbox {
+    display: inline-block;
+    position: relative;
+    width: 13px;
+    height: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+    .bootstrap-checkbox i {
+        position: absolute;
+        left: -1px;
+        top: -2px;
+        font-size: 20px;
+    }
+
+.custom-error {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.custom-error h3 {
+    font-size: 20px;
+}
+
+.custom-error h3:first-child {
+    color: #E68000;
+}
+
+.custom-error ul {
+    list-style: none;
+}
+
+.custom-error .header {
+    font-weight: bold;
+    border: 0;
+    background-color: white;
+    color: black;
+    height: auto;
+    margin-top: 15px;
+}
+
+.custom-error h2 {
+    margin-bottom: 20px;
+}
+
+.max-rows-msg {
+    font-size: 20px;
+    color: #E68000;
+    line-height: 100px;
+}
+
+#header .search-container {
+    min-width: 100%;
+}
+
+#header .menu-container {
+    padding-top: 0px !important;
+    height: 47px !important;
+}
+
+.container-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 87px;
+}
+
+.header-position {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #009edb;
+}
+
+.nice-logo-image {
+    height: 40px !important;
+    width: 200px !important;
+    margin-left: 0px !important;
+}
+
+.k-loading-color {
+    opacity: 0 !important;
+}
+
+.h2-style {
+    margin-top: 0px;
+}
+
+.tab-content-padding {
+    padding: 5px 2px;
+}
+
+#content-area-timeframe {
+    padding: 0 10px;
+}
+
+#manageTimeFrameModal .form-group {
+    margin-bottom: 5px;
+}
+
+#manageTimeFrameModal label.error {
+    padding: 0 .5em;
+}
+
+.margin-bottom-15 {
+    margin: 0px 0px 5px 0px;
+}
+
+.page-header-container {
+    padding-bottom: 0px !important;
+    margin: 0;
+}
+
+div#body, .centered-fixed-width-content {
+    padding-left: 0px;
+    width: 100%;
+}
+
+h2, .h2 {
+    line-height: 30px !important;
+    font-size: 24px !important;
+}
+
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+    padding: 5px 5px 5px 5px !important;
+    line-height: 15px !important;
+}
+
+/*.user-title-margin {
+    margin-right: 15px !important;
+}*/
+
+.success-message {
+    text-align: left;
+    margin-bottom: 1em;
+    display: none;
+}
+
+.error-message {
+    background-color: #E68000;
+    font-size: 14px;
+    padding: 10px;
+    color: white;
+    text-align: left;
+    display: none;
+}
+
+#check-all-text-notification, check-all-help-notification {
+    display: inline;
+}
+
+.help-Icon {
+    color: #00a1e1;
+}
+/* Tab Session */
+.tab-area {
+    background: #00a1e1;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.nav li.active a {
+    border-radius: 4px 4px 0 0;
+}
+
+.nav li a:hover {
+    color: #555
+}
+
+.nav > li > a {
+    color: #fff;
+}
+
+.chk-hdr-disabled {
+    color: #777;
+}
+
+.chk-all-disabled {
+    color: #ddd;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hpadding-20 {
+    padding: 0px 10px;
+}
+
+.modal-open {
+    margin-right: 0px !important;
+}
+
+.device-row-item {
+    padding-left: 40px;
+}
+
+.select-aslabel {
+    background-color: transparent !important;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    box-shadow: none;
+    padding: 0.3em 0.5em;
+    cursor: default !important;
+}
+
+    .select-aslabel::-ms-expand {
+        display: none;
+    }
+
+.device-type-phone {
+    width: calc(100% - 20px);
+    float: left;
+    visibility: hidden;
+}
+
+.form-group-phone {
+    width: 100%;
+}
+
+.remove-device-div {
+    padding-right: 0;
+    float: right;
+    width: 15px;
+}
+
+.device-type-smsphone {
+    width: 22%;
+}
+
+.country-code-dropdown {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 51px;
+    padding: 6px 2px;
+}
+
+    .country-code-dropdown:hover {
+        background-color: #00a6ff;
+    }
+
+#country-code > li > a > .fa {
+    visibility: hidden;
+    margin-right: 5px;
+}
+
+#country-code > li > a.selected > .fa {
+    visibility: visible;
+    margin-right: 5px;
+}
+
+.country-code-option {
+    padding: 3px 5px !important;
+}
+
+.devices-type-style {
+    padding-right: 0px;
+    padding-left: 0px;
+    display: flex;
+}
+
+.glyphicon-style {
+    width: 14px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.remove-device-width {
+    width: 14px;
+    padding-top: 10px;
+}
+
+.input-type-phone {
+    display: inline-block;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: -5px;
+    width: 78%;
+}
+
+#country-code {
+    min-width: 265px;
+    max-width: 266px;
+    max-height: 135px;
+    overflow: auto;
+    position: fixed;
+    top: auto;
+    left: auto;
+    padding-top: 0px;
+    margin: 1px 0 0;
+}
+
+.equal-spacing {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#country-code.dropdown-menu li a:hover {
+    width: 155%;
+}
+
+.search-country-code {
+    margin: 0px 9px 3px 4px;
+    height: 26px;
+    border-radius: 4px;
+    width: 97%;
+    position: fixed;
+    max-width: 240px;
+}
+
+    .search-country-code::-ms-clear {
+        display: none; /*Remove cross symbol in IE on search country code input field*/
+    }
+
+.country-code-li {
+    position: initial;
+    margin-left: 5px;
+}
+
+#manageTimeFrameModal .modal-body {
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+#manageTimeFrameModal .modal-footer {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#time-frame-tab {
+}
+
+    #time-frame-tab li {
+        max-width: 175px;
+        white-space: nowrap;
+    }
+
+        #time-frame-tab li span {
+            display: inline-block;
+            max-width: 120px;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+        }
+
+        #time-frame-tab li a, #time-frame-tab li a:hover {
+            height: 98%;
+        }
+
+.remove-tab {
+    margin-left: 10px;
+    vertical-align: super;
+}
+
+.bootstrap-datetimepicker-widget {
+    width: 84%;
+}
+
+.notification-status-text {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.notification-status-enabled {
+    color: green;
+}
+
+.notification-status-disabled {
+    color: red;
+}
+
+.notification-status-div {
+    padding-left: 3px;
+    margin-top: 3px;
+}
+
+#timeZoneDiv {
+    padding-left: 0px;
+}
+
+#enable-disable-notification {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+@media screen and (min-width:992px) {
+    .device-type-smsphone {
+        margin-right: -8px;
+    }
+
+    .input-type-phone {
+        width: calc( 78% + 8px );
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    #country-code {
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:992px) and (min-width: 768px) {
+    .country-code-dropdown {
+        padding: 6px 3px;
+        width: 51px;
+    }
+
+    .device-description {
+        padding: 6px 6px;
+    }
+
+    .device-row-item {
+        padding-left: 0px;
+    }
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .device-type-smsphone {
+        margin-right: -15px;
+    }
+
+    .input-type-phone {
+        width: calc( 78% + 15px );
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .device-row-item {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #country-code {
+        min-width: 250px;
+        max-width: 250px;
+        max-height: 135px;
+        overflow: auto;
+        position: fixed;
+        top: auto;
+        left: auto;
+        padding-top: 0px;
+        margin: 1px 0 0;
+    }
+}
+
+.impersonation-container-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 100px;
+}

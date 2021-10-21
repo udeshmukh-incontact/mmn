@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InContact.Sfdc.Domain.XMattersIntegrationService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="NotificationGroupStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Failed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NotificationGroupStatus" nillable="true" type="tns:NotificationGroupStatus" />
+  <xs:complexType name="XMUserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cluster" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClusterPrefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartnerPrefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmattersGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="accounts" nillable="true" type="tns:ArrayOfCadeBillAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XMUserDetails" nillable="true" type="tns:XMUserDetails" />
+  <xs:complexType name="ArrayOfCadeBillAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CadeBillAccount" nillable="true" type="tns:CadeBillAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCadeBillAccount" nillable="true" type="tns:ArrayOfCadeBillAccount" />
+  <xs:complexType name="CadeBillAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CadebillAccountNo__c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CadeBillAccount" nillable="true" type="tns:CadeBillAccount" />
+  <xs:complexType name="ArrayOfXMAuditType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XMAuditType" nillable="true" type="tns:XMAuditType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXMAuditType" nillable="true" type="tns:ArrayOfXMAuditType" />
+  <xs:complexType name="XMAuditType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XMAuditType" nillable="true" type="tns:XMAuditType" />
+  <xs:complexType name="ArrayOfXMAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XMAudit" nillable="true" type="tns:XMAudit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXMAudit" nillable="true" type="tns:ArrayOfXMAudit" />
+  <xs:complexType name="XMAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADFSGuid__c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Audit_Type__c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Change_Source__c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Event_Change_Details__c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Event_Date__c" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User__c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmPerson__c" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XMAudit" nillable="true" type="tns:XMAudit" />
+</xs:schema>

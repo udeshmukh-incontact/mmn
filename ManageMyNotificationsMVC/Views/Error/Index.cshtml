@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="custom-error">
+    <h3>This page is undergoing maintenance and is unavailable. We're sorry for the inconvenience.</h3>
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <h4>If you are experiencing a technical issue, please contact Technical Support at:</h4>
+        <div class="custom-error">
+            @Html.Raw(ViewBag.ErrorMessage)
+        </div>
+    }
+</div>
+@section sessiontimeout{
+    @Scripts.Render("~/bundles/sessiontimeout")
+}
+

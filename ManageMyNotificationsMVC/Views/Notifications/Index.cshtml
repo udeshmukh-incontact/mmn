@@ -1,0 +1,223 @@
+﻿@model ManageMyNotificationsMVC.Models.NotificationViewModel
+
+@{
+    ViewBag.Title = "Notification Management";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section kendoCss{
+    @Styles.Render("~/Content/kendo/css")
+}
+
+
+<div class="page-header">
+    <style>
+        div {
+            border-bottom-style: none;
+        }
+    </style>
+
+    <h2 class="float-left"> Notification Management</h2>
+    <div class="clear-both"> </div> <div class="clear-both"> </div>
+
+</div>
+
+<br />
+<br />
+<div id="notification" class="incontact-two-column-first-column incontact-padding">
+    <div class="incontact-display-label float-left" style="width:210px;text-align: left;">
+        Notification Profile Status
+    </div>
+
+    <div class="incontact-display-field second-column">
+        <div id="desc" class="float-right" style="display:inline-block;display: none;padding-left: 15px;margin-top: -9px;">
+            Enabling your profile will allow you to manage<br /> your notification devices and subscriptions.
+        </div>
+        <div id="buttonContainer1" style="text-align: right; float: left;">
+            <div id="disabledLabel" class="incontact-label">
+                Disabled
+                <a id="enable" class="dialog-confirm incontact-white-action-button" style="margin-left: 15px;">Enable</a>
+            </div>
+        </div>
+
+        <div id="buttonContainer2" style="text-align: right;">
+            <div id="enabledLabel" class="incontact-label">
+                Enabled
+                <a id="disable" class="dialog-cancel incontact-white-action-button" style="margin-left: 15px;">Disable</a>
+            </div>
+        </div>
+
+        <div class="clear-both"></div>
+        <div id="modalWindow" style="display: none; padding: 10px;">
+            @using (Html.BeginForm("DisableNotification", "Notifications", new { isRemove = false }, FormMethod.Post, new { id = "disableConfirmForm" }))
+            {
+                <div id="modalContainer">
+                    <div style="margin: 10px 5px;">
+                        <div id="modalMessage">
+                            Are you sure you want to stop receiving NICE inContact Event and Maintenance notifications?
+                            <br />
+                            <br />
+                        </div>
+                        <div class="clear-both"></div>
+                        <br />
+                    </div>
+                    <br />
+
+                    <div id="saveCancel" class="save-cancel-button-group float-right" style="margin-top: 10px;">
+                        <a id="submit-confirm" class="dialog-confirm incontact-blue-action-button">OK</a>
+                        <a id="cancel-confirm" class="dialog-cancel incontact-blue-action-button">Cancel</a>
+                    </div>
+
+                    <div class="clear-both"></div>
+                    <br />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+    <div style="text-align: left; float: initial;">
+        <a id="manageLink" href="/Notifications/Manage" style="display: none;">Manage Devices and Subscription Groups</a>
+    </div>
+
+
+<script>
+    $(document).ready(function () {
+           @if(Model.isEnabled)
+            {
+                <text>
+                    $('#enabledLabel').show();
+                    $('#disabe').show();
+                    $('#disabledLabel').hide();
+                    $('#enable').hide();
+                    $('#desc').hide();
+                    $('#manageLink').show();
+                </text>
+              }
+
+              @if (Model.isDisabled)
+              {
+                  <text>
+                    $('#enabledLabel').hide();
+                    $('#disabe').hide();
+                    $('#disabledLabel').show();
+                    $('#enable').show();
+                    $('#desc').show();
+                    $('#manageLink').hide();
+                 </text>
+              }
+
+
+            $("#modalWindow").kendoWindow({
+                modal: true,
+                visible: false,
+                width: 400,
+                title: "Disable"
+            });
+
+            $("#disable").click(function (e) {
+                $("#modalWindow").data("kendoWindow").center();
+                $("#modalWindow").data("kendoWindow").open();
+
+            });
+
+            $("#enable").click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+                if ( me.data('requestRunning') ) {
+                    return;
+                }
+                me.data('requestRunning', true);
+                //For spinner div
+                $('#notification')
+                    .prepend("<div class='k-loading-mask' style='width: 100%;height: 100%;top: 0;left: 0;'><span class='k-loading-text'>Saving...</span><div class='k-loading-image'><div class='k-loading-color'></div></div></div>");
+
+                $.when(getData('@Url.Action("EnableNotification", "Notifications")')).then(function (data) {
+                    if (data) {
+                        if (data.isEnabled) {
+                            $('#enabledLabel').show();
+                            $('#disabe').show();
+                            $('#disabledLabel').hide();
+                            $('#enable').hide();
+                            $('#desc').hide();
+                            $('#manageLink').show();
+                        } else if (data.isDisabled) {
+                            $('#enabledLabel').hide();
+                            $('#disabe').hide();
+                            $('#disabledLabel').show();
+                            $('#enable').show();
+                            $('#desc').show();
+                            $('#manageLink').hide();
+                        }
+
+                        if (data.canEnable == false) {
+                            $('#enabledLabel').hide();
+                            $('#disabe').hide();
+                            $('#disabledLabel').show();
+                            $('#enable').show();
+                            $('#desc').show();
+                            $('#manageLink').hide();
+                            window.location.href = '@Url.Action("Manage","Notifications")'
+                        }
+                    }
+
+                    me.data('requestRunning', false);
+                    //Removing spinner on ajax complete
+                    $('#notification').find("div.k-loading-mask").remove();
+                }).fail(function () {
+                    me.data('requestRunning', false);
+                    //Removing spinner on ajax error
+                    $('#notification').find("div.k-loading-mask").remove();
+                });
+            });
+
+            $("#submit-confirm").click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+                if ( me.data('requestRunning') ) {
+                    return;
+                }
+                me.data('requestRunning', true);
+                //For spinner div
+                $('#modalContainer')
+                    .prepend("<div class='k-loading-mask' style='width:95%;height:80%;'><span class='k-loading-text'>Saving...</span><div class='k-loading-image'><div class='k-loading-color'></div></div></div>");
+
+                $.when(getData('@Url.Action("DisableNotification", "Notifications")')).then(function (data) {
+                    if (data) {
+                        if (data.isEnabled) {
+                            $('#enabledLabel').show();
+                            $('#disabe').show();
+                            $('#disabledLabel').hide();
+                            $('#enable').hide();
+                            $('#desc').hide();
+                            $('#manageLink').show();
+                        }
+
+                        if (data.isDisabled) {
+                            $('#enabledLabel').hide();
+                            $('#disabe').hide();
+                            $('#disabledLabel').show();
+                            $('#enable').show();
+                            $('#desc').show();
+                            $('#manageLink').hide();
+                        }
+                    }
+                    me.data('requestRunning', false);
+                    //Removing spinner on ajax complete
+                    $('#modalContainer').find("div.k-loading-mask").remove();
+                    $("#modalWindow").data("kendoWindow").close();
+                }).fail(function () {
+                    //Removing spinner on ajax complete
+                    $('#modalContainer').find("div.k-loading-mask").remove();
+                    $("#modalWindow").data("kendoWindow").close();
+                });
+            });
+
+            $("#cancel-confirm").click(function (e) {
+                $("#modalWindow").data("kendoWindow").close();
+            });
+    });
+</script>
+
+

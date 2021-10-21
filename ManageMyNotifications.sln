@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageMyNotificationsMVC", "ManageMyNotificationsMVC\ManageMyNotificationsMVC.csproj", "{D614ACF2-1F97-4D08-ADD4-96DDA6F2D6F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9F9B8019-7524-4939-8B53-9CF0A759811E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageMyNotificationsLogicUnitTests", "ManageMyNotificationsLogicUnitTests\ManageMyNotificationsLogicUnitTests.csproj", "{2F24871C-EB96-43D5-BC46-A718EC0F37A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{ACEC38CC-65DE-409A-9AF4-63306754C0C2}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\NuGet.exe = Tools\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageMyNotificationsBusinessLayer", "ManageMyNotificationsBusinessLayer\ManageMyNotificationsBusinessLayer.csproj", "{0F0D9A14-F7EE-47F9-A00D-FDC203F41DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageMyNotificationsBusinessLayerTests", "ManageMyNotificationsBusinessLayerTests\ManageMyNotificationsBusinessLayerTests.csproj", "{90E8FE7E-FE63-42CF-AE4E-4C8F0C6C546D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageMyNotificationsMVCTests", "ManageMyNotificationsMVCTests\ManageMyNotificationsMVCTests.csproj", "{3422DDD0-18CB-4678-969E-A5153423F38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB80AAB5-3BAD-4290-B355-4C0E2F6596A9}"
+	ProjectSection(SolutionItems) = preProject
+		CodeCoverage.runsettings = CodeCoverage.runsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D614ACF2-1F97-4D08-ADD4-96DDA6F2D6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D614ACF2-1F97-4D08-ADD4-96DDA6F2D6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D614ACF2-1F97-4D08-ADD4-96DDA6F2D6F5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D614ACF2-1F97-4D08-ADD4-96DDA6F2D6F5}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2F24871C-EB96-43D5-BC46-A718EC0F37A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F24871C-EB96-43D5-BC46-A718EC0F37A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F24871C-EB96-43D5-BC46-A718EC0F37A3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F24871C-EB96-43D5-BC46-A718EC0F37A3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0F0D9A14-F7EE-47F9-A00D-FDC203F41DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0D9A14-F7EE-47F9-A00D-FDC203F41DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0D9A14-F7EE-47F9-A00D-FDC203F41DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0D9A14-F7EE-47F9-A00D-FDC203F41DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E8FE7E-FE63-42CF-AE4E-4C8F0C6C546D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E8FE7E-FE63-42CF-AE4E-4C8F0C6C546D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E8FE7E-FE63-42CF-AE4E-4C8F0C6C546D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E8FE7E-FE63-42CF-AE4E-4C8F0C6C546D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3422DDD0-18CB-4678-969E-A5153423F38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3422DDD0-18CB-4678-969E-A5153423F38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3422DDD0-18CB-4678-969E-A5153423F38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3422DDD0-18CB-4678-969E-A5153423F38E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F24871C-EB96-43D5-BC46-A718EC0F37A3} = {9F9B8019-7524-4939-8B53-9CF0A759811E}
+		{90E8FE7E-FE63-42CF-AE4E-4C8F0C6C546D} = {9F9B8019-7524-4939-8B53-9CF0A759811E}
+		{3422DDD0-18CB-4678-969E-A5153423F38E} = {9F9B8019-7524-4939-8B53-9CF0A759811E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FD42067-CAF1-4A52-98EC-979897454DA9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://corptfs02.ucn.net:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ManageMyNotificationsMVC\\ManageMyNotificationsMVC.csproj
+		SccProjectName1 = ManageMyNotificationsMVC
+		SccLocalPath1 = ManageMyNotificationsMVC
+		SccProjectUniqueName2 = ManageMyNotificationsLogicUnitTests\\ManageMyNotificationsLogicUnitTests.csproj
+		SccProjectTopLevelParentUniqueName2 = ManageMyNotifications.sln
+		SccProjectName2 = ManageMyNotificationsLogicUnitTests
+		SccLocalPath2 = ManageMyNotificationsLogicUnitTests
+		SccProjectUniqueName3 = ManageMyNotificationsBusinessLayer\\ManageMyNotificationsBusinessLayer.csproj
+		SccProjectName3 = ManageMyNotificationsBusinessLayer
+		SccLocalPath3 = ManageMyNotificationsBusinessLayer
+		SccProjectUniqueName4 = ManageMyNotificationsBusinessLayerTests\\ManageMyNotificationsBusinessLayerTests.csproj
+		SccProjectTopLevelParentUniqueName4 = ManageMyNotifications.sln
+		SccProjectName4 = ManageMyNotificationsBusinessLayerTests
+		SccLocalPath4 = ManageMyNotificationsBusinessLayerTests
+		SccProjectUniqueName5 = ManageMyNotificationsMVCTests\\ManageMyNotificationsMVCTests.csproj
+		SccProjectTopLevelParentUniqueName5 = ManageMyNotifications.sln
+		SccProjectName5 = ManageMyNotificationsMVCTests
+		SccLocalPath5 = ManageMyNotificationsMVCTests
+	EndGlobalSection
+EndGlobal

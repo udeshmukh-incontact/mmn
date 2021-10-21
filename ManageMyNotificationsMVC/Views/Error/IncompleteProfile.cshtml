@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Profile Not Found";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    body {
+        display: block;
+    }
+</style>
+
+<div class="custom-error">
+    <h2>No Business Unit or Product/Cluster found. Please contact your support representative.</h2>
+    @Html.ActionLink("Ok", "Logout", "Notifications", null, new { @class= "incontact-blue-action-button" })
+</div>
+@section sessiontimeout{
+    @Scripts.Render("~/bundles/sessiontimeout")
+}
